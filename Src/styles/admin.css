@@ -1,0 +1,33 @@
+aside {
+    border: solid 2px #7400AC;
+    border-radius: 20px;
+    width: 20%;
+    height: 90vh;
+    margin: 10px;
+}
+
+#functionalities{
+list-style-type: none;
+margin-left: 0px;
+}
+
+#functionalities li {
+    cursor: pointer;
+    margin: 10px;
+    border: solid 2px #7400AC;
+    padding: 10px;
+    text-align: center;
+}
+
+#functionalities li:hover {
+    background-color: #c0a2f8;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
