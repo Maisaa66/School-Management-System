@@ -94,3 +94,67 @@ margin-left: 0px;
     position: absolute;
     left: 849px;
 }
+
+#tchTable, th, td, #stTable, #crsTable, #tchTableDelete, #stTableDelete, #crsTableDelete {
+    border: solid 2px #7400AC;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+#tchTable th, #stTable th, #crsTable th, #tchTableDelete th, #stTableDelete th, #crsTableDelete th {
+    background-color: #7400AC;
+    color: white;
+}
+
+#tchTable, #stTable, #crsTable, #tchTableDelete, #stTableDelete, #crsTableDelete {
+    border-radius: 20px;
+    width: 900px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#tchEdit, #stEdit, #crsEdit, #tchDelete, #stDelete, #crsDelete {
+    margin: auto;
+    display: none;
+
+}
+
+.editBtn {
+    background-color: #04AA6D;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    border: solid 2px #04AA6D;
+    width: 50%;
+    margin: auto;
+
+}
+
+.editBtn:hover {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #04AA6D;
+    cursor: pointer;
+}
+
+.deleteBtn {
+    background-color: #DC143C;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    border: solid 2px #DC143C;
+    width: 50%;
+    margin: auto;
+
+}
+
+.deleteBtn:hover {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #DC143C;
+    cursor: pointer;
+}
