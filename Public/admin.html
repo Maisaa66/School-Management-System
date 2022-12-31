@@ -9,24 +9,167 @@
     <title>Admin</title>
   </head>
   <body>
-    <aside>
-      <ul id="functionalities">
-        <div id="profile">
-          <img src="../Assets/img/profile-icon.png" alt="profile icon" /><span
-            id="profile-name"
-            >Hello Hamada</span
-          >
+    <nav id="navbar">
+<p>
+  School Name
+</p>
+    </nav>
+
+
+    <div id="adminBody">
+      <aside>
+        <ul id="functionalities">
+          <div id="profile">
+            <img src="../Assets/img/profile-icon.png" alt="profile icon" /><span
+              id="profile-name"
+              >Hello Hamada</span
+            >
+          </div>
+          <li>Add Teacher</li>
+          <li>Edit Teacher</li>
+          <li>Delete Teacher</li>
+          <li>Add Student</li>
+          <li>Edit Student</li>
+          <li>Delete Student</li>
+          <li>Add Course</li>
+          <li>Edit Course</li>
+          <li>Delete Course</li>
+        </ul>
+      </aside>
+  
+
+      <!-- Teacher Form -->
+      <div id="tchForm">
+        <form >
+          <div>
+            <label>Teacher Name</label>
+            <input type="text" id="tchName">
+          </div>
+  
+          <div>
+            <label>Teacher ID</label>
+            <input type="text" id="tchId">
+          </div>
+  
+          <div>
+            <label>Teacher Password</label>
+            <input type="password" id="tchPassword">
+          </div>
+  
+          <div>
+            <label>Teacher username</label>
+            <input type="text" id="tch-userName">
+          </div>
+  
+          <div>
+            <label>Teacher Courses</label>
+            <select>
+              <option>Please select course</option>
+              <option>Course1</option>
+              <option>Course2</option>
+              <option>Course3</option>
+            </select>
+          </div>
+  
+
+
+        </form>
+        <div id="addTchbtn">
+          Add
         </div>
-        <li>Add Teacher</li>
-        <li>Edit Teacher</li>
-        <li>Delete Teacher</li>
-        <li>Add Student</li>
-        <li>Edit Student</li>
-        <li>Delete Student</li>
-        <li>Add Course</li>
-        <li>Edit Course</li>
-        <li>Delete Course</li>
-      </ul>
-    </aside>
+      </div>
+
+
+      <!-- Student Form -->
+      <div id="stForm">
+        <form >
+          <div>
+            <label>Student Name</label>
+            <input type="text" id="stName">
+          </div>
+  
+          <div>
+            <label>Student ID</label>
+            <input type="text" id="stId">
+          </div>
+  
+          <div>
+            <label>Student Password</label>
+            <input type="password" id="stPassword">
+          </div>
+  
+          <div>
+            <label>student username</label>
+            <input type="text" id="std-userName">
+          </div>
+  
+          <div>
+            <label>Student Courses</label>
+            <select>
+              <option>Please select course</option>
+              <option>Course1</option>
+              <option>Course2</option>
+              <option>Course3</option>
+            </select>
+          </div>
+  
+
+
+        </form>
+        <div id="addTchbtn">
+          Add
+        </div>
+      </div>
+
+
+      <!-- Courses Form -->
+
+      <div id="crsForm" style="display: block;">
+        <form >
+          <div>
+            <label>Course Name</label>
+            <input type="text" id="crsName">
+          </div>
+  
+          <div>
+            <label>Course ID</label>
+            <input type="text" id="crs-stID">
+          </div>
+  
+          <div>
+            <label>Teacher ID</label>
+            <input type="text" id="crs-tchID">
+          </div>
+  
+          <div>
+            <label>Number of students</label>
+            <input type="number" id="crsNumber">
+          </div>
+  
+          <div>
+            <label>Course description</label>
+            <textarea id="crs-desc"></textarea>
+
+          </div>
+
+          <div>
+            <label>Couser Content</label>
+            <input type="text" id="crs-content"  multiple>
+            <span id="crs-note"> Please, seperate your content by comma (,)</span>
+
+          </div>
+  
+
+
+        </form>
+        <div id="addTchbtn">
+          Add
+        </div>
+      </div>
+
+
+
+    </div>
+    
   </body>
 </html>

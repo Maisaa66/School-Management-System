@@ -1,0 +1,78 @@
+.log-out {
+    cursor: pointer;
+    display: block;
+    color: #F89F5B;
+    padding-top: 10px;
+}
+.breadCrumb {
+    height: 60px;
+    background-color: #BC2EFF;
+    padding: 0 30px;
+    justify-content: flex-start;
+    color: white;
+}
+
+.breadCrumb button {
+    background: none;
+    border: none;
+    padding: 10px;
+    color: #fFFFFf;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.breadCrumb button.active {
+    color: #F89F5B;
+}
+
+.sec {
+    padding: 60px;
+}
+.student-info {
+    gap: 40px;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+.userImage {
+    width: 100px;
+}
+.userImage img {
+    width: 100%;
+}
+
+.studentData h1 {
+    color: #7400AC;
+    margin-bottom: 20px;
+}
+
+.studentData .label {
+    color: #F89F5B;
+    padding-right: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.studentData p {
+    margin-bottom: 10px;
+}
+.studentData .ID, .studentData .numCourses {
+    color: #BC2EFF;
+    font-size: 18px;
+}
+.courses {
+    margin-top: 30px;
+}
+
+.course {
+    width: 30%;
+    border: 1px solid #7400AC;
+    border-radius: 15px;
+    padding: 20px 40px;
+}
+
+.course h2{
+    color: #BC2EFF;
+}
+.course p {
+    margin: 20px 0;
+    color: #F89F5B;
+}
