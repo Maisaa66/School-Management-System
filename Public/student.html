@@ -17,12 +17,12 @@
         </div>
     </nav>
     <header class="breadCrumb flex-row">
-        <button id="profile" class="active">Profile</button>
+        <button id="profileBtn" class="active">Profile</button>
         <span>/</span>
-        <button id="courses">My Courses</button>
+        <button id="gradesBtn">My Grades</button>
     </header>
     <main>
-        <div id="profile" class="sec">
+        <div id="profile" class="sec  hidden">
             <div class="student-info flex-row">
                 <div class="userImage">
                     <img src="../Assets/img/user.png">
@@ -54,6 +54,38 @@
                     <p class="description">Mandatory Course, consists of 60 hrs.</p>
                 </div>
             </div>
+        </div>
+        <div id="grades">
+            <table id="grades-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Grade</th>
+                        <th>Exam</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="grades-row">
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>90</td>
+                        <td>85</td>
+                        <td>Passed</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>90</td>
+                        <td>85</td>
+                        <td>Passed</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>90</td>
+                        <td>85</td>
+                        <td>Passed</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 </body>
