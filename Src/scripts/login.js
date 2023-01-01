@@ -34,6 +34,9 @@ function matchCredentials(userType, userN, passW) {
     });
     if(user[0]) {
         console.log("OK");
+        let s1 = new Student(1111, "Nour", "n11", "n22");
+        console.log(s1, s1.getPassword());
+        s1.login("../Public/student.html");
     }
     else {
         warning.innerText = "Invalid username or password"
