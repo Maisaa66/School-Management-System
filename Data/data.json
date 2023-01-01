@@ -1,0 +1,137 @@
+{
+    "admin":[
+        {"name":"Ali",
+         "id":152,
+         "userName":"ali152",
+         "password":"ali123456"
+        }
+
+    ],
+
+    "Teacher":[
+        {"name":"Ahmed",
+         "id":987,
+         "userName":"ahmed987",
+         "password":"ahmed123456",
+         "coursesId":[404, 402]
+        },
+
+        {"name":"Medhat",
+        "id":657,
+        "userName":"medhat657",
+        "password":"medhat123456",
+        "coursesId":[603, 606]
+       }
+
+    ],
+
+    "Student":[
+        {"name":"Amr Mohamed",
+         "id":1023,
+         "userName":"amr1023",
+         "password":"amr123456",
+         "coursesId":[404, 606]
+        },
+
+        {"name":"Nour Sameh",
+        "id":1024,
+        "userName":"nour1024",
+        "password":"nou123456",
+        "coursesId":[603, 402]
+       },
+
+       {"name":"Basel Hesham",
+       "id":1234,
+       "userName":"basel1234",
+       "password":"basel123456",
+       "coursesId":[606, 402]
+      },
+
+      {"name":"Reem Gamil",
+      "id":7045,
+      "userName":"reem7045",
+      "password":"reem123456",
+      "coursesId":[606, 404]
+     },
+
+     {"name":"Rawan Hassan",
+     "id":7066,
+     "userName":"rawan7066",
+     "password":"rawan123456",
+     "coursesId":[402, 404]
+    },
+
+    {"name":"Nouran Hassan",
+    "id":1045,
+    "userName":"nouran1045",
+    "password":"nouran123456",
+    "coursesId":[603, 606]
+   },
+
+   {"name":"Eslam Essam",
+   "id":6754,
+   "userName":"eslam6754",
+   "password":"eslam123456",
+   "coursesId":[603, 404]
+  },
+  
+  {"name":"Toaa Essam",
+  "id":2003,
+  "userName":"toaa2003",
+  "password":"toaa123456",
+  "coursesId":[402, 603]
+ }
+
+    ],
+
+
+    "Courses":[
+        {"name":"software engineering",
+         "crsID":404,
+         "tchID":987,
+         "numStds":15,
+         "description":"This course introduces students to the different software development lifecycle (SDLC) phases used in developing, delivering, and maintaining software products",
+         "content":"Introduction to the Software Engineering Lifecycle (SDLC), Software Requirements Analysis",
+        "stdGrade":[
+            {"stdID":1234, "grade":78 },
+            {"stdID":1023, "grade":65}
+          ]
+        },
+        {"name":"Introduction to programming language",
+         "crsID":402,
+         "tchID":657,
+         "numStds":20,
+         "description":"This course introduces the fundamental concepts of procedural programming.",
+         "content":" Fundamental programming constructs, Fundamental data structures",
+        "stdGrade":[
+            {"stdID":2003, "grade":95 },
+            {"stdID":6754, "grade":89}
+          ]
+        },
+        {"name":"Soft skills",
+        "crsID":603,
+        "tchID":657,
+        "numStds":20,
+        "description":"This course will focuses on developing skills such as communication, teamwork and problem solving",
+        "content":" formal and informal communication, code switching, strategies for communicating",
+       "stdGrade":[
+           {"stdID":1045, "grade":85 },
+           {"stdID":7066, "grade":88}
+         ]
+       },
+       {"name":"object-oriented programming",
+       "crsID":606,
+       "tchID":987,
+       "numStds":15,
+       "description":"The course focuses on the understanding and practical mastery of object-oriented concepts",
+       "content":"Classes, Objects, Data abstraction",
+      "stdGrade":[
+          {"stdID":7045, "grade":85 },
+          {"stdID":1024, "grade":88}
+        ]
+      }         
+
+    ]
+
+
+}
