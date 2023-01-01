@@ -42,7 +42,7 @@ section {
 .course {
   width: 25vw;
 
-  background-color: #c0a2f8;
+border: 2px solid #c0a2f8;
   border-radius: 20px;
   margin-bottom: 25px;
   padding: 20px;
