@@ -100,9 +100,15 @@ h3 {
   list-style: square;
 }
 
+.course {
+  position: relative;
+}
 .btnContainer {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
 }
 .btnContainer button {
   width: 150px;
