@@ -71,9 +71,15 @@ function updateGrades(crs) {
     });
 }
 
-[gradesBtn, profileBtn].forEach(btn => btn.addEventListener("click", function() {
-    profile.classList.toggle("hidden");
-    grades.classList.toggle("hidden");
-    profileBtn.classList.toggle("active");
-    gradesBtn.classList.toggle("active");
-}));
+gradesBtn.addEventListener("click", function() {
+    std.viewCoursesGrades(profile, grades, profileBtn, gradesBtn);
+});
+profileBtn.addEventListener("click", function() {
+    std.viewCoursesGrades(profile, grades, profileBtn, gradesBtn);
+});
+// [gradesBtn, profileBtn].forEach(btn => btn.addEventListener("click", function() {
+//     profile.classList.toggle("hidden");
+//     grades.classList.toggle("hidden");
+//     profileBtn.classList.toggle("active");
+//     gradesBtn.classList.toggle("active");
+// }));

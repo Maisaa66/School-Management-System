@@ -26,8 +26,11 @@ class User {
 class Student extends User {
   constructor(id, name, userName, password, crss) {
     super(id, name, userName, password, crss); // Parent constructor
-    this.viewCoursesGrades = function () {
-      console.log("viewGrades");
+    this.viewCoursesGrades = function (profile, grades, profileBtn, gradesBtn) {
+      profile.classList.toggle("hidden");
+      grades.classList.toggle("hidden");
+      profileBtn.classList.toggle("active");
+      gradesBtn.classList.toggle("active");
     };
     this.viewStdProfile = function (profile, btn) {
       profile.classList.toggle("hidden");
