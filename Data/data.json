@@ -97,7 +97,7 @@
             {"stdID":1023, "grade":65}
           ]
         },
-        {"name":"Introduction to programming language",
+        {"name":"C Programming language",
          "crsID":402,
          "tchID":657,
          "numStds":20,

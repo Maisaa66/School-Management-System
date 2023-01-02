@@ -4,70 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="Src/styles/main.css" />
-    <link rel="stylesheet" href="Src/styles/degrees.css" />
+    <link href="../Src/styles/main.css" rel="stylesheet" />
+    <link href="../Src/styles/courseDegrees.css" rel="stylesheet" />
+    <title>Course's Degrees</title>
   </head>
   <body>
     <nav class="navBar flex-row">
       <h1>Horas International School</h1>
       <div>
+        <div id="welcome-msg">Welcome Mahmoud</div>
         <a class="log-out">Log Out</a>
       </div>
-      <aside>
-        <ul id="functionalities">
-          <div id="profile">
-            <img src="../Assets/img/profile-icon.png" alt="profile icon" /><span
-              id="profile-name"
-              >Hello Hamada</span
-            >
-          </div>
-          <li>Add Teacher</li>
-          <li>Edit Teacher</li>
-          <li>Delete Teacher</li>
-          <li>Add Student</li>
-          <li>Edit Student</li>
-          <li>Delete Student</li>
-          <li>Add Course</li>
-          <li>Edit Course</li>
-          <li>Delete Course</li>
-        </ul>
-      </aside>
     </nav>
-    <div class="container">
-      <section class="degreesContainer">
-        <h3>Course Degrees</h3>
-        <table class="studentsDegrees" border="1">
-          <tr>
-            <th>Student Name</th>
-            <th>Student Degree</th>
-          </tr>
-          <tr>
-            <td class="studentName">name</td>
-            <td class="studentDegree">degree</td>
-          </tr>
-          <tr>
-            <td class="studentName"></td>
-            <td class="studentDegree"></td>
-          </tr>
-          <tr>
-            <td class="studentName"></td>
-            <td class="studentDegree"></td>
-          </tr>
-          <tr>
-            <td class="studentName"></td>
-            <td class="studentDegree"></td>
-          </tr>
-          <tr>
-            <td class="studentName"></td>
-            <td class="studentDegree"></td>
-          </tr>
-          <tr>
-            <td class="studentName"></td>
-            <td class="studentDegree"></td>
-          </tr>
+    <header class="breadCrumb flex-row">
+      <button id="profileBtn" class="active">Courses</button>
+      <span>/</span>
+      <button id="gradesBtn">Grades</button>
+    </header>
+    <main>
+      <div id="grades">
+        <table id="grades-table">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Grade</th>
+              <th>Full Mark</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="grades-row">
+            <tr>
+              <td>courseName</td>
+              <td>90</td>
+              <td>100</td>
+              <td>Passed</td>
+            </tr>
+            <tr>
+              <td>courseName</td>
+              <td>90</td>
+              <td>100</td>
+              <td>Passed</td>
+            </tr>
+            <tr>
+              <td>courseName</td>
+              <td>90</td>
+              <td>100</td>
+              <td>Passed</td>
+            </tr>
+          </tbody>
         </table>
-      </section>
-    </div>
+      </div>
+    </main>
   </body>
 </html>

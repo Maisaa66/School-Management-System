@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="Src/styles/main.css" />
-    <link rel="stylesheet" href="Src/styles/courses.css" />
+    <link rel="stylesheet" href="../Src/styles/main.css" />
+    <link rel="stylesheet" href="../Src/styles/courses.css" />
   </head>
   <body>
     <nav class="navBar flex-row">
@@ -14,6 +14,8 @@
       <div>
         <a class="log-out">Log Out</a>
       </div>
+    </nav>
+    <div id="bodyContent">
       <aside>
         <ul id="functionalities">
           <div id="profile">
@@ -33,44 +35,36 @@
           <li>Delete Course</li>
         </ul>
       </aside>
-    </nav>
-    <div class="container">
-      <!-- ---------------- Course 1 ----------------- -->
+      <div class="container">
+        <!-- ---------------- Course 1 ----------------- -->
 
-      <div class="course">
-        <h2 class="courseName">course1</h2>
-        <p class="courseId">Course ID:<span>12</span></p>
-        <p class="teacherId">Teacher ID: <span>201</span></p>
-        <section class="courseStudents">
-          <h3>Number of Students:</h3>
-          <p class="numOfStudents">4</p>
-        </section>
-        <section class="courseDesc">
-          <h3>Course Description</h3>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
-            molestias placeat doloremque quisquam officiis doloribus earum vitae
-            dicta veniam modi, tenetur id rem accusantium, voluptatum
-            praesentium obcaecati fugiat numquam?
-          </p>
-        </section>
-        <section class="contentContainer">
-          <h3>Course Content</h3>
-          <ul class="courseContent">
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-          </ul>
-        </section>
-
-        <button class="btn editCourse">Edit Course</button>
-        <button class="btn viewStudents">View Students</button>
-      </div>
-      <!-- -----------------------------
+        <div class="course">
+          <h2 class="courseName">course1</h2>
+          <p class="courseId">Course ID:<span>12</span></p>
+          <p class="teacherId">Teacher ID: <span>201</span></p>
+          <section class="courseStudents">
+            <h3>Number of Students:</h3>
+            <p class="numOfStudents">4</p>
+          </section>
+          <section class="courseDesc">
+            <h3>Course Description</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
+              molestias placeat doloremque quisquam officiis doloribus earum
+              vitae dicta veniam modi, tenetur id rem accusantium, voluptatum
+              praesentium obcaecati fugiat numquam?
+            </p>
+          </section>
+          <section class="contentContainer">
+            <h3>Course Content</h3>
+            <ul class="courseContent"></ul>
+          </section>
+          <setion class="btnContainer">
+            <button class="btn editCourse">Edit Course</button>
+            <button class="btn viewStudents">View Students</button></setion
+          >
+        </div>
+        <!-- -----------------------------
 
         Course 2
         
@@ -78,210 +72,97 @@
          
                                 ------------------------------------------------- -->
 
-      <div class="course">
-        <h2 class="courseName">course1</h2>
-        <p class="courseId">Course ID:<span>12</span></p>
-        <p class="teacherId">Teacher ID: <span>201</span></p>
-        <section class="courseStudents">
-          <h3>Number of Students:</h3>
-          <p class="numOfStudents">4</p>
-        </section>
-        <section class="courseDesc">
-          <h3>Course Description</h3>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
-            molestias placeat doloremque quisquam officiis doloribus earum vitae
-            dicta veniam modi, tenetur id rem accusantium, voluptatum
-            praesentium obcaecati fugiat numquam?
-          </p>
-        </section>
-        <section class="contentContainer">
-          <h3>Course Content</h3>
-          <ul class="courseContent">
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-          </ul>
-        </section>
+        <div class="course">
+          <h2 class="courseName">course1</h2>
+          <p class="courseId">Course ID:<span>12</span></p>
+          <p class="teacherId">Teacher ID: <span>201</span></p>
+          <section class="courseStudents">
+            <h3>Number of Students:</h3>
+            <p class="numOfStudents">4</p>
+          </section>
+          <section class="courseDesc">
+            <h3>Course Description</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
+              molestias placeat doloremque quisquam officiis doloribus earum
+              vitae dicta veniam modi, tenetur id rem accusantium, voluptatum
+              praesentium obcaecati fugiat numquam?
+            </p>
+          </section>
+          <section class="contentContainer">
+            <h3>Course Content</h3>
+            <ul class="courseContent"></ul>
+          </section>
 
-        <section class="degreesContainer">
-          <h3>Course Degrees</h3>
+          <setion class="btnContainer">
+            <button class="btn editCourse">Edit Course</button>
+            <button class="btn viewStudents">View Students</button></setion
+          >
+        </div>
+        <!-- ---------------- Course 3 ----------------- -->
 
-          <table class="studentsDegrees" border="1">
-            <tr>
-              <th>Student Name</th>
-              <th>Student Degree</th>
-            </tr>
-            <tr>
-              <td class="studentName">name</td>
-              <td class="studentDegree">degree</td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-          </table>
-        </section>
-        <button class="btn editCourse">Edit Course</button>
-        <button class="btn viewStudents">View Students</button>
-      </div>
-      <!-- ---------------- Course 3 ----------------- -->
+        <div class="course">
+          <h2 class="courseName">course1</h2>
+          <p class="courseId">Course ID:<span>12</span></p>
+          <p class="teacherId">Teacher ID: <span>201</span></p>
+          <section class="courseStudents">
+            <h3>Number of Students:</h3>
+            <p class="numOfStudents">4</p>
+          </section>
+          <section class="courseDesc">
+            <h3>Course Description</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
+              molestias placeat doloremque quisquam officiis doloribus earum
+              vitae dicta veniam modi, tenetur id rem accusantium, voluptatum
+              praesentium obcaecati fugiat numquam?
+            </p>
+          </section>
+          <section class="contentContainer">
+            <h3>Course Content</h3>
+            <ul class="courseContent"></ul>
+          </section>
 
-      <div class="course">
-        <h2 class="courseName">course1</h2>
-        <p class="courseId">Course ID:<span>12</span></p>
-        <p class="teacherId">Teacher ID: <span>201</span></p>
-        <section class="courseStudents">
-          <h3>Number of Students:</h3>
-          <p class="numOfStudents">4</p>
-        </section>
-        <section class="courseDesc">
-          <h3>Course Description</h3>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
-            molestias placeat doloremque quisquam officiis doloribus earum vitae
-            dicta veniam modi, tenetur id rem accusantium, voluptatum
-            praesentium obcaecati fugiat numquam?
-          </p>
-        </section>
-        <section class="contentContainer">
-          <h3>Course Content</h3>
-          <ul class="courseContent">
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-          </ul>
-        </section>
+          <setion class="btnContainer">
+            <button class="btn editCourse">Edit Course</button>
+            <button class="btn viewStudents">View Students</button></setion
+          >
+        </div>
+        <!-- ---------------- Course 4 ----------------- -->
+        <div class="course">
+          <h2 class="courseName">course1</h2>
+          <p class="courseId">Course ID:<span>12</span></p>
+          <p class="teacherId">Teacher ID: <span>201</span></p>
+          <section class="courseStudents">
+            <h3>Number of Students:</h3>
+            <p class="numOfStudents">4</p>
+          </section>
+          <section class="courseDesc">
+            <h3>Course Description</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
+              molestias placeat doloremque quisquam officiis doloribus earum
+              vitae dicta veniam modi, tenetur id rem accusantium, voluptatum
+              praesentium obcaecati fugiat numquam?
+            </p>
+          </section>
+          <section class="contentContainer">
+            <h3>Course Content</h3>
+            <ul class="courseContent"></ul>
+          </section>
 
-        <section class="degreesContainer">
-          <h3>Course Degrees</h3>
-
-          <table class="studentsDegrees" border="1">
-            <tr>
-              <th>Student Name</th>
-              <th>Student Degree</th>
-            </tr>
-            <tr>
-              <td class="studentName">name</td>
-              <td class="studentDegree">degree</td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-          </table>
-        </section>
-        <button class="btn editCourse">Edit Course</button>
-        <button class="btn viewStudents">View Students</button>
-      </div>
-      <!-- ---------------- Course 4 ----------------- -->
-      <div class="course">
-        <h2 class="courseName">course1</h2>
-        <p class="courseId">Course ID:<span>12</span></p>
-        <p class="teacherId">Teacher ID: <span>201</span></p>
-        <section class="courseStudents">
-          <h3>Number of Students:</h3>
-          <p class="numOfStudents">4</p>
-        </section>
-        <section class="courseDesc">
-          <h3>Course Description</h3>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi at
-            molestias placeat doloremque quisquam officiis doloribus earum vitae
-            dicta veniam modi, tenetur id rem accusantium, voluptatum
-            praesentium obcaecati fugiat numquam?
-          </p>
-        </section>
-        <section class="contentContainer">
-          <h3>Course Content</h3>
-          <ul class="courseContent">
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-            <li class="contentItem">lorem</li>
-          </ul>
-        </section>
-
-        <section class="degreesContainer">
-          <h3>Course Degrees</h3>
-
-          <table class="studentsDegrees" border="1">
-            <tr>
-              <th>Student Name</th>
-              <th>Student Degree</th>
-            </tr>
-            <tr>
-              <td class="studentName">name</td>
-              <td class="studentDegree">degree</td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-            <tr>
-              <td class="studentName"></td>
-              <td class="studentDegree"></td>
-            </tr>
-          </table>
-        </section>
-        <button class="btn editCourse">Edit Course</button>
-        <button class="btn viewStudents">View Students</button>
+          <setion class="btnContainer">
+            <button class="btn editCourse">Edit Course</button>
+            <button class="btn viewStudents">View Students</button></setion
+          >
+        </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Src/scripts/courses.js"></script>
   </body>
 </html>

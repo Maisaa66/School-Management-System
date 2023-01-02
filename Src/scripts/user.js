@@ -19,6 +19,9 @@ class User {
     this.login = function (url) {
       location.replace(url);
     };
+    this.login = function (url) {
+      location.replace(url);
+    };
   }
 }
 
@@ -32,8 +35,8 @@ class Student extends User {
 }
 
 class Teacher extends User {
-  constructor(id, name) {
-    super(id, name); // Parent constructor
+  constructor(id, name, username, password) {
+    super(id, name, username, password); // Parent constructor
     this.courses = [];
     this.addGrade = function () {};
     this.editGrade = function () {};
@@ -42,8 +45,8 @@ class Teacher extends User {
   }
 }
 class Admin extends User {
-  constructor(id, name) {
-    super(id, name); // Parent constructor
+  constructor(id, name, username, password) {
+    super(id, name, username, password); // Parent constructor
     this.AddStudent = function () {};
     this.addTeacher = function () {};
     this.deleteStudent = function () {};
