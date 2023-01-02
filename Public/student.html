@@ -12,61 +12,46 @@
     <nav class="navBar flex-row">
         <h1>Horas International School</h1>
         <div>
-            <div id="welcome-msg">Welcome Mahmoud</div>
+            <div id="welcome-msg"></div>
             <a class="log-out">Log Out</a>
         </div>
     </nav>
     <header class="breadCrumb flex-row">
-        <button id="profileBtn" class="active">Profile</button>
+        <button id="profileBtn">Profile</button>
         <span>/</span>
         <button id="gradesBtn">My Grades</button>
     </header>
     <main>
-        <div id="profile" class="sec  hidden">
+        <div id="profile" class="sec hidden">
             <div class="student-info flex-row">
                 <div class="userImage">
                     <img src="../Assets/img/user.png">
                 </div>
                 <div class="studentData">
-                    <h1 id="studentName">Mahmoud Ali Kamel</h1>
-                    <p><span class="label">Id:</span><span class="ID">1112</span></p>
-                    <p><span class="label">No. Courses:</span><span class="numCourses">4</span></p>
+                    <h1 id="studentName"></h1>
+                    <p><span class="label">Id:</span><span class="ID" id="ID"></span></p>
+                    <p><span class="label">No. Courses:</span><span class="numCourses" id="numCourses"></span></p>
                 </div>
             </div>
             <h2>My Courses</h2>
-            <div class="courses flex-row">
-                <div class="course">
+            <div class="courses flex-row" id="courses">
+                <!-- <div class="course">
                     <h2 class="courseName">Geography</h2>
                     <p class="courseId">Id: C-1112</p>
-                    <!-- <p class="teacherId"></p> -->
-                    <p class="description">Mandatory Course, consists of 60 hrs.</p>
-                </div>
-                <div class="course">
-                    <h2 class="courseName">Mathematics</h2>
-                    <p class="courseId">Id: C-1112</p>
-                    <!-- <p class="teacherId"></p> -->
-                    <p class="description">Mandatory Course, consists of 60 hrs.</p>
-                </div>
-                <div class="course">
-                    <h2 class="courseName">Arabic</h2>
-                    <p class="courseId">Id: C-1112</p>
-                    <!-- <p class="teacherId"></p> -->
-                    <p class="description">Mandatory Course, consists of 60 hrs.</p>
-                </div>
+                    <p class="description">Mandatory Course, consists of 60 hrs.</p> -->
             </div>
         </div>
-        <div id="grades">
+        <div id="grades" class="hidden">
             <table id="grades-table">
                 <thead>
                     <tr>
                         <th>Course</th>
                         <th>Grade</th>
-                        <th>Exam</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody id="grades-row">
-                    <tr>
+                    <!-- <tr>
                         <td>Mathematics</td>
                         <td>90</td>
                         <td>85</td>
@@ -75,7 +60,6 @@
                     <tr>
                         <td>Mathematics</td>
                         <td>90</td>
-                        <td>85</td>
                         <td>Passed</td>
                     </tr>
                     <tr>
@@ -83,10 +67,13 @@
                         <td>90</td>
                         <td>85</td>
                         <td>Passed</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
     </main>
+    <script src="../Libraries/JqueryDev.js"></script>
+    <script src="../Src/scripts/user.js"></script>
+    <script src="../Src/scripts/student.js"></script>
 </body>
 </html>

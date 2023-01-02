@@ -2,8 +2,8 @@
     "admin":[
         {"name":"Ali",
          "id":152,
-         "userName":"ali152",
-         "password":"ali123456"
+         "userName":"ali111",
+         "password":"ali111"
         }
 
     ],
@@ -28,15 +28,15 @@
     "Student":[
         {"name":"Amr Mohamed",
          "id":1023,
-         "userName":"amr1023",
-         "password":"amr123456",
+         "userName":"amr111",
+         "password":"amr111",
          "coursesId":[404, 606]
         },
 
         {"name":"Nour Sameh",
         "id":1024,
         "userName":"nour1024",
-        "password":"nou123456",
+        "password":"nour123456",
         "coursesId":[603, 402]
        },
 
@@ -97,7 +97,7 @@
             {"stdID":1023, "grade":65}
           ]
         },
-        {"name":"Introduction to programming language",
+        {"name":"C Programming language",
          "crsID":402,
          "tchID":657,
          "numStds":20,

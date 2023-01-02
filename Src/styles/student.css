@@ -54,6 +54,9 @@
 }
 .courses {
     margin-top: 30px;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 .course {
@@ -65,10 +68,14 @@
 
 .course h2{
     color: #BC2EFF;
+    text-transform: capitalize;
 }
 .course p {
     margin: 20px 0;
     color: #F89F5B;
+}
+p.description {
+    color: black;
 }
 #grades {
     margin: 40px;

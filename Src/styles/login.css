@@ -44,3 +44,6 @@ form .form-input {
     margin-right: auto;
     border-radius: 10px;
 }
+.warning {
+    color: red;
+}
