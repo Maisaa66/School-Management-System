@@ -68,6 +68,8 @@ let addCrsBtn = navButtons[7];
 let editCrsBtn = navButtons[8];
 let delteCrsBtn = navButtons[9];
 
+let editTch = document.getElementById("editTch");
+
 addTchBtn.addEventListener("click", function(){
     tchForm.style.display="block";
     stForm.style.display="none";
@@ -78,6 +80,8 @@ addTchBtn.addEventListener("click", function(){
     tchDelete.style.display="none";
     stDelete.style.display="none";
     crsDelete.style.display="none";
+    editTch.style.display="none";
+
 
 
 })

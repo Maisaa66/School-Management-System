@@ -63,14 +63,15 @@
           <div>
             <label>Teacher Courses</label>
             <select id="tchCourses" multiple="multiple">
-              <option>Please select course</option>
-              <option>Course1</option>
-              <option>Course2</option>
+              <option >404</option>
+              <option>402</option>
               <option>Course3</option>
             </select>
           </div>
         </form>
         <div class="addTchbtn" id="addTch">Add</div>
+        <div class="addTchbtn" id="editTch">Edit</div>
+
       </div>
 
       <!-- Student Form -->
@@ -99,7 +100,7 @@
           <div>
             <label>Student Courses</label>
             <select id="stdCourses" multiple="multiple">
-              <option>Course1</option>
+              <option >Course1</option>
               <option>Course2</option>
               <option>Course3</option>
             </select>
@@ -146,6 +147,7 @@
           </div>
         </form>
         <div class="addTchbtn" id="addCrs">Add</div>
+        
       </div>
 
       <!---------------------------------------------- Edit Tables ---------------------------------------------->
@@ -160,13 +162,13 @@
           </tr>
           <tr>
             <td>Teacher 1</td>
-            <td>12345</td>
-            <td><div class="teacherEditBtn">Edit</div></td>
+            <td>987</td>
+            <td><div class="teacherEditBtn" >Edit</div></td>
           </tr>
           <tr>
             <td>Teacher 2</td>
             <td>6789</td>
-            <td><div class="teacherEditBtn">Edit</div></td>
+            <td><div class="teacherEditBtn" >Edit</div></td>
           </tr>
         </table>
       </div>
@@ -187,7 +189,7 @@
           <tr>
             <td>Student 2</td>
             <td>6789</td>
-            <td><div class="studentEditBtn">Edit</div></td>
+            <td><div class="studentEditBtn" id="stdEdit">Edit</div></td>
           </tr>
         </table>
       </div>
@@ -208,7 +210,7 @@
           <tr>
             <td>Course 2</td>
             <td>6789</td>
-            <td><div class="courseEditBtn">Edit</div></td>
+            <td><div class="courseEditBtn" id="crsEdit">Edit</div></td>
           </tr>
         </table>
       </div>
@@ -278,10 +280,8 @@
         </table>
       </div>
     </div>
-
+    <script src="../Src/scripts/edit.js" type="module"></script>
     <script src="../Src/scripts/user.js"></script>
     <script src="../Src/scripts/addFunctionility.js"></script>
-
-    <script src="../Src/scripts/edit.js" type="module"></script>
   </body>
 </html>

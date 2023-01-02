@@ -3,18 +3,9 @@ class User {
     this.id = id;
     this.name = name;
     this.courses = crss ? crss : [];
-    // Private
-    let userName = userN ? userN : name;
-    let password = passW ? passW : name + 123456;
-    
+    this.userName = userN ? userN : name;
+    this.password = passW ? passW : name + 123456;
 
-    // Getters
-    this.getUsername = function () {
-      return userName;
-    };
-    this.getPassword = function () {
-      return password;
-    };
     // Login method
     this.login = function (url) {
       localStorage.setItem("stdData", JSON.stringify(this));
