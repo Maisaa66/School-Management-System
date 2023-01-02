@@ -98,14 +98,14 @@
 
           <div>
             <label>Student Courses</label>
-            <select>
+            <select id="stdCourses" multiple="multiple">
               <option>Course1</option>
               <option>Course2</option>
               <option>Course3</option>
             </select>
           </div>
         </form>
-        <div class="addTchbtn">Add</div>
+        <div class="addTchbtn" id="addStd">Add</div>
       </div>
 
       <!-- Courses Form -->
@@ -119,7 +119,7 @@
 
           <div>
             <label>Course ID</label>
-            <input type="text" id="crs-stID" required/>
+            <input type="text" id="crs-ID" required/>
           </div>
 
           <div>
@@ -145,13 +145,13 @@
             >
           </div>
         </form>
-        <div class="addTchbtn">Add</div>
+        <div class="addTchbtn" id="addCrs">Add</div>
       </div>
 
       <!---------------------------------------------- Edit Tables ---------------------------------------------->
 
       <!-- Teacher Table -->
-      <div id="tchEdit"  style="display: block">
+      <div id="tchEdit">
         <table id="tchTable">
           <tr>
             <th>Teacher name</th>
@@ -258,7 +258,7 @@
       </div>
 
       <!-- Course Table Delete -->
-      <div id="crsDelete" style="display: block">
+      <div id="crsDelete" >
         <table id="crsTableDelete">
           <tr>
             <th>Course name</th>

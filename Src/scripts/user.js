@@ -51,26 +51,39 @@ class Teacher extends User {
 class Admin extends User {
   constructor(id, name, username, password) {
     super(id, name, username, password); // Parent constructor
-    this.AddStudent = function () {};
+
+    this.AddStudent = function (Student) {
+      window.localStorage.setItem("Student"+Student.id, JSON.stringify(Student));
+      location.reload();
+      alert("Student added successfully");
+    };
 
     this.addTeacher = function (Teacher) {
-      window.localStorage.setItem("tchData"+Teacher.id, JSON.stringify(Teacher));
+      window.localStorage.setItem("Teacher"+Teacher.id, JSON.stringify(Teacher));
       location.reload();
       alert("Teacher added successfully");
+    };
+
+    this.addCourse = function (Courses) {
+      window.localStorage.setItem("Courses"+Courses.id, JSON.stringify(Courses));
+      location.reload();
+      alert("Course added successfully");
     };
 
     this.deleteStudent = function () {};
     this.deleteTeacher = function () {};
     this.editStudent = function () {};
     this.editTeacher = function () {};
+    //edit on teacher
     this.assignTchCourse = function () {};
+    //edit on student
     this.assignStdCourse = function () {};
   }
 }
 
 class Courses {
   constructor(id, name, tchId, numStds, description, content) {
-    this.crsId = id;
+    this.id = id;
     this.name = name;
     this.tchId = tchId;
     this.numStds = numStds;

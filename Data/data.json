@@ -87,7 +87,7 @@
 
     "Courses":[
         {"name":"software engineering",
-         "crsID":404,
+         "id":404,
          "tchID":987,
          "numStds":15,
          "description":"This course introduces students to the different software development lifecycle (SDLC) phases used in developing, delivering, and maintaining software products",
@@ -98,7 +98,7 @@
           ]
         },
         {"name":"C Programming language",
-         "crsID":402,
+         "id":402,
          "tchID":657,
          "numStds":20,
          "description":"This course introduces the fundamental concepts of procedural programming.",
@@ -109,7 +109,7 @@
           ]
         },
         {"name":"Soft skills",
-        "crsID":603,
+        "id":603,
         "tchID":657,
         "numStds":20,
         "description":"This course will focuses on developing skills such as communication, teamwork and problem solving",
@@ -120,7 +120,7 @@
          ]
        },
        {"name":"object-oriented programming",
-       "crsID":606,
+       "id":606,
        "tchID":987,
        "numStds":15,
        "description":"The course focuses on the understanding and practical mastery of object-oriented concepts",
@@ -132,6 +132,5 @@
       }         
 
     ]
-
 
 }
