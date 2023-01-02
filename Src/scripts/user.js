@@ -52,7 +52,13 @@ class Admin extends User {
   constructor(id, name, username, password) {
     super(id, name, username, password); // Parent constructor
     this.AddStudent = function () {};
-    this.addTeacher = function () {};
+
+    this.addTeacher = function (Teacher) {
+      window.localStorage.setItem("tchData"+Teacher.id, JSON.stringify(Teacher));
+      location.reload();
+      alert("Teacher added successfully");
+    };
+
     this.deleteStudent = function () {};
     this.deleteTeacher = function () {};
     this.editStudent = function () {};

@@ -42,27 +42,27 @@
         <form>
           <div>
             <label>Teacher Name</label>
-            <input type="text" id="tchName" />
+            <input type="text" id="tchName" required/>
           </div>
 
           <div>
             <label>Teacher ID</label>
-            <input type="text" id="tchId" />
+            <input type="text" id="tchId" required/>
           </div>
 
           <div>
             <label>Teacher Password</label>
-            <input type="password" id="tchPassword" />
+            <input type="password" id="tchPassword" required/>
           </div>
 
           <div>
             <label>Teacher username</label>
-            <input type="text" id="tch-userName" />
+            <input type="text" id="tch-userName" required/>
           </div>
 
           <div>
             <label>Teacher Courses</label>
-            <select>
+            <select id="tchCourses" multiple="multiple">
               <option>Please select course</option>
               <option>Course1</option>
               <option>Course2</option>
@@ -70,7 +70,7 @@
             </select>
           </div>
         </form>
-        <div class="addTchbtn">Add</div>
+        <div class="addTchbtn" id="addTch">Add</div>
       </div>
 
       <!-- Student Form -->
@@ -78,28 +78,27 @@
         <form>
           <div>
             <label>Student Name</label>
-            <input type="text" id="stName" />
+            <input type="text" id="stName" required/>
           </div>
 
           <div>
             <label>Student ID</label>
-            <input type="text" id="stId" />
+            <input type="text" id="stId" required/>
           </div>
 
           <div>
             <label>Student Password</label>
-            <input type="password" id="stPassword" />
+            <input type="password" id="stPassword" required/>
           </div>
 
           <div>
             <label>student username</label>
-            <input type="text" id="std-userName" />
+            <input type="text" id="std-userName" required/>
           </div>
 
           <div>
             <label>Student Courses</label>
             <select>
-              <option>Please select course</option>
               <option>Course1</option>
               <option>Course2</option>
               <option>Course3</option>
@@ -115,32 +114,32 @@
         <form>
           <div>
             <label>Course Name</label>
-            <input type="text" id="crsName" />
+            <input type="text" id="crsName" required/>
           </div>
 
           <div>
             <label>Course ID</label>
-            <input type="text" id="crs-stID" />
+            <input type="text" id="crs-stID" required/>
           </div>
 
           <div>
             <label>Teacher ID</label>
-            <input type="text" id="crs-tchID" />
+            <input type="text" id="crs-tchID" required/>
           </div>
 
           <div>
             <label>Number of students</label>
-            <input type="number" id="crsNumber" />
+            <input type="number" id="crsNumber" required/>
           </div>
 
           <div>
             <label>Course description</label>
-            <textarea id="crs-desc"></textarea>
+            <textarea id="crs-desc" required></textarea>
           </div>
 
           <div>
             <label>Course Content</label>
-            <input type="text" id="crs-content" multiple />
+            <input type="text" id="crs-content" multiple required/>
             <span id="crs-note">
               Please, seperate your content by comma (,)</span
             >
@@ -259,7 +258,7 @@
       </div>
 
       <!-- Course Table Delete -->
-      <div id="crsDelete" style="display: block">
+      <div id="crsDelete" >
         <table id="crsTableDelete">
           <tr>
             <th>Course name</th>
@@ -269,15 +268,18 @@
           <tr>
             <td>Course 1</td>
             <td>12345</td>
-            <td><div class="deleteBtn">Edit</div></td>
+            <td><div class="deleteBtn">Delete</div></td>
           </tr>
           <tr>
             <td>Course 2</td>
             <td>6789</td>
-            <td><div class="deleteBtn">Edit</div></td>
+            <td><div class="deleteBtn">Delete</div></td>
           </tr>
         </table>
       </div>
     </div>
+
+    <script src="../Src/scripts/user.js"></script>
+    <script src="../Src/scripts/addFunctionility.js"></script>
   </body>
 </html>
