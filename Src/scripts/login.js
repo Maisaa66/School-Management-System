@@ -1,6 +1,5 @@
-
-let data;
-
+let data;//all data
+let person;
 let username = document.querySelector("#username");
 let password = document.querySelector("#password");
 let logInBtn = document.querySelector(".btn");
@@ -26,19 +25,30 @@ $.getJSON("./Data/data.json", function(myData) {
 });
 
 function matchCredentials(userType, userN, passW) {
+    let url;
+    switch(userType) {
+        case "admin" :
+            url = "../Public/admin.html";
+        break;
+        case "Teacher":
+            url = "../Public/teacher.html";
+        break;
+        case "Student":
+            url = "../Public/student.html"
+        break;
+    }
     let users = data[userType];
-    let user = users.map(user => {
+    let userC;
+    users.forEach(user => {
         if(user.userName === userN && user.password === passW) {
-            return user;
+            userC = user;
         }
     });
-    if(user[0]) {
-        console.log("OK");
-        let s1 = new Student(1111, "Nour", "n11", "n22");
-        console.log(s1, s1.getPassword());
-        s1.login("../Public/student.html");
+    if(userC) {
+        person = new Student(userC.id, userC.name, userC.userName, userC.password, userC.coursesId);
+        person.login(url);
     }
     else {
-        warning.innerText = "Invalid username or password"
+        warning.innerText = "Invalid username or password";
     }
 }
