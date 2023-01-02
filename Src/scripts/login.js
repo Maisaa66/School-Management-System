@@ -45,7 +45,17 @@ function matchCredentials(userType, userN, passW) {
         }
     });
     if(userC) {
-        person = new Student(userC.id, userC.name, userC.userName, userC.password, userC.coursesId);
+        switch(userType) {
+            case "admin" :
+                person = new Admin(userC.id, userC.name, userC.userName, userC.password);
+            break;
+            case "Teacher":
+                person = new Teacher(userC.id, userC.name, userC.userName, userC.password, userC.coursesId);
+            break;
+            case "Student":
+                person = new Student(userC.id, userC.name, userC.userName, userC.password, userC.coursesId);
+            break;
+        }
         person.login(url);
     }
     else {

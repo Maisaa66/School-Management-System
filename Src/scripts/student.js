@@ -51,7 +51,7 @@ function viewCourses(crs) {
     crs.forEach(crs => {
         let course = `<div class="course">
         <h2 class="courseName">${crs.name}</h2>
-        <p class="courseId">Id: ${crs.crsID}</p>
+        <p class="courseId">Course Id: ${crs.crsID}</p>
         <p class="description">${crs.description
         }</p>
     </div>`;
