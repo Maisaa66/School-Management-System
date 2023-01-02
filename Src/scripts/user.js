@@ -29,10 +29,9 @@ class Student extends User {
     this.viewCoursesGrades = function () {
       console.log("viewGrades");
     };
-    this.viewStdProfile = function (profile) {
-      console.log("viwing");
-      console.log(profile);
+    this.viewStdProfile = function (profile, btn) {
       profile.classList.toggle("hidden");
+      btn.classList.toggle("active");
     };
   }
 }
