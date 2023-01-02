@@ -1,28 +1,20 @@
 class User {
-  constructor(id, name) {
+  constructor(id, name, username, password) {
     this.id = id;
     this.name = name;
-
-    // Private
-    let username = name;
-    let password = name + 123456;
-
-    // Getters
-    this.getUsername = function () {
-      return username;
-    };
-    this.getPassword = function () {
-      return password;
-    };
+    this.userName = username;
+    this.password = password;
 
     // Login method
-    this.login = function () {};
+    this.login = function (url) {
+      location.replace(url);
+    };
   }
 }
 
 class Student extends User {
-  constructor(id, name) {
-    super(id, name); // Parent constructor
+  constructor(id, name, username, password) {
+    super(id, name, username, password); // Parent constructor
     this.courses = [];
     this.viewCoursesGrades = function () {};
     this.viewStdProfile = function () {};
@@ -30,8 +22,8 @@ class Student extends User {
 }
 
 class Teacher extends User {
-  constructor(id, name) {
-    super(id, name); // Parent constructor
+  constructor(id, name, username, password) {
+    super(id, name, username, password); // Parent constructor
     this.courses = [];
     this.addGrade = function () {};
     this.editGrade = function () {};
@@ -40,8 +32,8 @@ class Teacher extends User {
   }
 }
 class Admin extends User {
-  constructor(id, name) {
-    super(id, name); // Parent constructor
+  constructor(id, name, username, password) {
+    super(id, name, username, password); // Parent constructor
     this.AddStudent = function () {};
     this.addTeacher = function () {};
     this.deleteStudent = function () {};
