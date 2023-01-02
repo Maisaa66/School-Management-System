@@ -119,7 +119,7 @@ margin-left: 0px;
 
 }
 
-.editBtn {
+.teacherEditBtn, .studentEditBtn, .courseEditBtn {
     background-color: #04AA6D;
     padding: 5px 10px;
     border-radius: 20px;
@@ -131,7 +131,7 @@ margin-left: 0px;
 
 }
 
-.editBtn:hover {
+.teacherEditBtn:hover, .studentEditBtn:hover, .courseEditBtn:hover {
     background-color: white;
     padding: 5px 10px;
     border-radius: 20px;
