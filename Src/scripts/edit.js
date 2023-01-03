@@ -27,6 +27,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
     let tchData = localStorage.getItem("Teacher" + teacher_id);
 
     addTch.style.display = "none";
+    editTch.style.display="block";
 
     tchData = JSON.parse(tchData);
 
@@ -90,7 +91,9 @@ for (var i = 0; i < edit_buttons.length; i++) {
 
     let stData = localStorage.getItem("Student" + student_id);
 
-    addStd.style.display = "none";
+    addStd.style.display = 'none';
+    editStd.style.display="block";
+
 
     stData = JSON.parse(stData);
 
@@ -149,7 +152,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
 
     let crsData = localStorage.getItem("Courses" + course_id);
 
-    addCrs.style.display = "none";
+    addCrs.style.display = 'none';
+    editCrs.style.display="block";
 
     crsData = JSON.parse(crsData);
 

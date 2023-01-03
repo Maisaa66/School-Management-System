@@ -66,6 +66,8 @@ let editCrsBtn = navButtons[8];
 let delteCrsBtn = navButtons[9];
 
 let editTch = document.getElementById("editTch");
+let editStd = document.getElementById("editStd");
+let editCrs = document.getElementById("editCrs");
 
 addTchBtn.addEventListener("click", function () {
   tchForm.style.display = "block";
@@ -77,7 +79,8 @@ addTchBtn.addEventListener("click", function () {
   tchDelete.style.display = "none";
   stDelete.style.display = "none";
   crsDelete.style.display = "none";
-  editTch.style.display = "none";
+  addTch.style.display = 'block';
+  editTch.style.display="none";
 });
 
 editTchBtn.addEventListener("click", function () {
@@ -114,6 +117,8 @@ addStBtn.addEventListener("click", function () {
   tchDelete.style.display = "none";
   stDelete.style.display = "none";
   crsDelete.style.display = "none";
+  addStd.style.display = 'block';
+  editStd.style.display="none";
 });
 
 editStBtn.addEventListener("click", function () {
@@ -150,6 +155,9 @@ addCrsBtn.addEventListener("click", function () {
   tchDelete.style.display = "none";
   stDelete.style.display = "none";
   crsDelete.style.display = "none";
+  addCrs.style.display = 'block';
+  editCrs.style.display="none";
+
 });
 
 editCrsBtn.addEventListener("click", function () {
