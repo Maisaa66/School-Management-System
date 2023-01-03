@@ -63,9 +63,9 @@
           <div>
             <label>Teacher Courses</label>
             <select id="tchCourses" multiple="multiple">
-              <option>404</option>
+              <!-- <option>404</option>
               <option>402</option>
-              <option>Course3</option>
+              <option>Course3</option> -->
             </select>
           </div>
         </form>
@@ -99,9 +99,9 @@
           <div>
             <label>Student Courses</label>
             <select id="stdCourses" multiple="multiple">
-              <option>Course1</option>
+              <!-- <option>Course1</option>
               <option>Course2</option>
-              <option>Course3</option>
+              <option>Course3</option> -->
             </select>
           </div>
         </form>
@@ -160,7 +160,7 @@
             <th>Teacher ID</th>
             <th></th>
           </tr>
-          <tr>
+          <!-- <tr>
             <td>Teacher 1</td>
             <td>987</td>
             <td><div class="teacherEditBtn">Edit</div></td>
@@ -169,7 +169,7 @@
             <td>Teacher 2</td>
             <td>6789</td>
             <td><div class="teacherEditBtn">Edit</div></td>
-          </tr>
+          </tr> -->
         </table>
       </div>
 
@@ -181,16 +181,8 @@
             <th>Student ID</th>
             <th></th>
           </tr>
-          <tr>
-            <td>Student 1</td>
-            <td>1023</td>
-            <td><div class="studentEditBtn">Edit</div></td>
-          </tr>
-          <tr>
-            <td>Student 2</td>
-            <td>6789</td>
-            <td><div class="studentEditBtn" id="stdEdit">Edit</div></td>
-          </tr>
+
+
         </table>
       </div>
 
@@ -201,16 +193,6 @@
             <th>Course name</th>
             <th>Course ID</th>
             <th></th>
-          </tr>
-          <tr>
-            <td>Course 1</td>
-            <td>404</td>
-            <td><div class="courseEditBtn">Edit</div></td>
-          </tr>
-          <tr>
-            <td>Course 2</td>
-            <td>6789</td>
-            <td><div class="courseEditBtn" id="crsEdit">Edit</div></td>
           </tr>
         </table>
       </div>
@@ -225,16 +207,12 @@
             <th>Teacher ID</th>
             <th></th>
           </tr>
-          <tr>
+          <tr id="tchRow">
             <td>Teacher 1</td>
             <td>987</td>
             <td><div class="teacherDeleteBtn">Delete</div></td>
           </tr>
-          <tr>
-            <td>Teacher 2</td>
-            <td>6789</td>
-            <td><div class="teacherDeleteBtn">Delete</div></td>
-          </tr>
+
         </table>
       </div>
 
@@ -246,14 +224,9 @@
             <th>Student ID</th>
             <th></th>
           </tr>
-          <tr>
+          <tr id="stdRow">
             <td>Student 1</td>
             <td>12345</td>
-            <td><div class="studentDeleteBtn">Delete</div></td>
-          </tr>
-          <tr>
-            <td>Student 2</td>
-            <td>6789</td>
             <td><div class="studentDeleteBtn">Delete</div></td>
           </tr>
         </table>
@@ -267,22 +240,23 @@
             <th>Course ID</th>
             <th></th>
           </tr>
-          <tr>
+          <tr id="crsRow">
             <td>Course 1</td>
             <td>12345</td>
             <td><div class="courseDeleteBtn">Delete</div></td>
           </tr>
-          <tr>
-            <td>Course 2</td>
-            <td>6789</td>
-            <td><div class="courseDeleteBtn">Delete</div></td>
-          </tr>
+
         </table>
       </div>
     </div>
+
+    <script src="../Src/scripts/localStorage.js" type="module"></script>
+    <script src="../Src/scripts/updateData.js" ></script>
+    <script src="../Src/scripts/retriveData.js"></script>
+    <script src="../Src/scripts/user.js" ></script>
     <script src="../Src/scripts/edit.js" type="module"></script>
-    <script src="../Src/scripts/user.js"></script>
     <script src="../Src/scripts/addFunctionility.js"></script>
     <script src="../Src/scripts/delete.js"></script>
+    
   </body>
 </html>

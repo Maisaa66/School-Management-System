@@ -1,10 +1,11 @@
 class User {
   constructor(id, name, userN, passW, crss) {
-    this.id = id;
     this.name = name;
-    this.courses = crss ? crss : [];
+    this.id = id;
     this.userName = userN ? userN : name;
     this.password = passW ? passW : name + 123456;
+    this.coursesId = crss ? crss : [];
+
 
     // Login method
     this.login = function (url) {
@@ -53,6 +54,8 @@ class Admin extends User {
       );
       location.reload();
       alert("Student added successfully");
+
+      updateData();
     };
 
     this.addTeacher = function (Teacher) {
@@ -62,6 +65,8 @@ class Admin extends User {
       );
       location.reload();
       alert("Teacher added successfully");
+      updateData();
+
     };
 
     this.addCourse = function (Courses) {
@@ -71,25 +76,39 @@ class Admin extends User {
       );
       location.reload();
       alert("Course added successfully");
+      updateData();
+
     };
 
     this.deleteStudent = function (id) {
       localStorage.removeItem("Student" + id);
+      updateData();
+
     };
     this.deleteTeacher = function (id) {
       localStorage.removeItem("Teacher" + id);
+      updateData();
+
     };
     this.deleteCourse = function (id) {
       localStorage.removeItem("Courses" + id);
+      updateData();
+
     };
     this.editStudent = function (newStData, student_id) {
       localStorage.setItem("Student" + student_id, JSON.stringify(newStData));
+      updateData();
+
     };
     this.editTeacher = function (newTchData, teacher_id) {
       localStorage.setItem("Teacher" + teacher_id, JSON.stringify(newTchData));
+      updateData();
+
     };
     this.editCourse = function (newCrsData, course_id) {
       localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
+      updateData();
+
     };
   }
 }

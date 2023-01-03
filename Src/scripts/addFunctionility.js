@@ -193,6 +193,8 @@ addTch.addEventListener("click", function () {
     choices
   );
   admin.addTeacher(newTch);
+  
+
 });
 
 // Add student event
@@ -205,6 +207,8 @@ addStd.addEventListener("click", function () {
     stdCourses
   );
   admin.AddStudent(newstd);
+  
+
 });
 
 // Add student event
@@ -218,4 +222,8 @@ addCrs.addEventListener("click", function () {
     crsContent.value
   );
   admin.addCourse(newCrs);
+  
+
 });
+
+

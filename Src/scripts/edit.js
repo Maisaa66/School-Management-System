@@ -52,6 +52,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
           tchCoursesData
         );
         admin.editTeacher(newTchData, teacher_id);
+        
+
       } else {
         let newTchData = new Teacher(
           tchData["id"],
@@ -65,6 +67,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
           JSON.stringify(newTchData)
         );
         admin.editTeacher(newTchData, teacher_id);
+        
+
       }
     });
   });
@@ -93,7 +97,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
     editStd.style.display = "block";
 
     stData = JSON.parse(stData);
-
+   
     stdName.value = stData["name"];
     stdId.disabled = true;
     stdPassword.value = stData["password"];
@@ -102,7 +106,9 @@ for (var i = 0; i < edit_buttons.length; i++) {
 
     for (var i = 0; i < stdCourses.length; i++) {
       if (stCoursesData.includes(parseInt(stdCourses[i].value))) {
-        stCourses[i].style.backgroundColor = "grey";
+        // console.log(stdCourses[i])
+
+        stdCourses[i].style.backgroundColor = "grey";
       }
     }
 
@@ -116,6 +122,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
           stCoursesData
         );
         admin.editStudent(newStData, student_id);
+        
+
       } else {
         let newStData = new Student(
           stData["id"],
@@ -125,8 +133,12 @@ for (var i = 0; i < edit_buttons.length; i++) {
           choices
         );
         admin.editStudent(newStData, student_id);
+        
+
       }
     });
+
+    stCoursesData=[];
   });
 }
 
@@ -173,6 +185,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
       );
       //   localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
       admin.editCourse(newCrsData, course_id);
+      
+
     });
   });
 }
