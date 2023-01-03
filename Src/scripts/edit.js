@@ -7,8 +7,6 @@ var teacher_form_div = document.getElementById("tchForm");
 var teacher_table = document.getElementById("tchTable");
 var edit_buttons = document.querySelectorAll(".teacherEditBtn");
 
-console.log(edit_buttons);
-
 for (var i = 0; i < edit_buttons.length; i++) {
   edit_buttons[i].addEventListener("click", function () {
     // edit_buttons[i].parentElement ---> column  /////  edit_buttons[i].parentElement.parentElement ---> row
@@ -27,7 +25,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
     let tchData = localStorage.getItem("Teacher" + teacher_id);
 
     addTch.style.display = "none";
-    editTch.style.display="block";
+    editTch.style.display = "block";
 
     tchData = JSON.parse(tchData);
 
@@ -91,9 +89,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
 
     let stData = localStorage.getItem("Student" + student_id);
 
-    addStd.style.display = 'none';
-    editStd.style.display="block";
-
+    addStd.style.display = "none";
+    editStd.style.display = "block";
 
     stData = JSON.parse(stData);
 
@@ -152,8 +149,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
 
     let crsData = localStorage.getItem("Courses" + course_id);
 
-    addCrs.style.display = 'none';
-    editCrs.style.display="block";
+    addCrs.style.display = "none";
+    editCrs.style.display = "block";
 
     crsData = JSON.parse(crsData);
 

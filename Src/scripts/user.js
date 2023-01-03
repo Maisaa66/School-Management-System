@@ -73,8 +73,15 @@ class Admin extends User {
       alert("Course added successfully");
     };
 
-    this.deleteStudent = function () {};
-    this.deleteTeacher = function () {};
+    this.deleteStudent = function (id) {
+      localStorage.removeItem("Student" + id);
+    };
+    this.deleteTeacher = function (id) {
+      localStorage.removeItem("Teacher" + id);
+    };
+    this.deleteCourse = function (id) {
+      localStorage.removeItem("Courses" + id);
+    };
     this.editStudent = function (newStData, student_id) {
       localStorage.setItem("Student" + student_id, JSON.stringify(newStData));
     };
@@ -84,10 +91,6 @@ class Admin extends User {
     this.editCourse = function (newCrsData, course_id) {
       localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
     };
-    //edit on teacher
-    this.assignTchCourse = function () {};
-    //edit on student
-    this.assignStdCourse = function () {};
   }
 }
 

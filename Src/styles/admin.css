@@ -140,7 +140,7 @@ margin-left: 0px;
     cursor: pointer;
 }
 
-.deleteBtn {
+.teacherDeleteBtn, .courseDeleteBtn, .studentDeleteBtn {
     background-color: #DC143C;
     padding: 5px 10px;
     border-radius: 20px;
