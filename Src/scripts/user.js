@@ -11,6 +11,9 @@ class User {
       localStorage.setItem("stdData", JSON.stringify(this));
       location.assign(url);
     };
+    this.logout = function() {
+      location.assign("../../index.html");
+    }
   }
 }
 

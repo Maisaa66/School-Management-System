@@ -77,6 +77,13 @@
 p.description {
     color: black;
 }
+
+.pass {
+    color: rgb(5, 113, 55);
+}
+.fail {
+    color: rgb(243, 23, 78);
+}
 #grades {
     margin: 40px;
 }

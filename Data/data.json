@@ -94,7 +94,7 @@
          "content":"Introduction to the Software Engineering Lifecycle (SDLC), Software Requirements Analysis",
         "stdGrade":[
             {"stdID":1234, "grade":78 },
-            {"stdID":1023, "grade":65}
+            {"stdID":1023, "grade":45}
           ]
         },
         {"name":"C Programming language",

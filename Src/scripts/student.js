@@ -30,8 +30,9 @@ let coursesDiv = document.querySelector("#courses");
     else {
         $.getJSON("../Data/data.json", function(myData) {
             let courses = myData["Courses"];
+            console.log(courses);
             courses.forEach(course => {
-                if(stdCourses.includes(course.crsID)) {
+                if(stdCourses.includes(course.id)) {
                     course.stdGrade.forEach(grade => {
                         if(std.id = grade.stdID) {
                             course.grade = grade.grade;
@@ -65,7 +66,7 @@ function updateGrades(crs) {
         let row = `<tr>
         <td>${crs.name}</td>
         <td>${crs.grade}</td>
-        <td>Passed</td>
+        <td class="${crs.grade >= 50 ? "pass": "fail"}">${crs.grade >= 50 ? "Passed": "Failed"}</td>
     </tr>`;
     gradeTable.insertAdjacentHTML("afterbegin", row);
     });
@@ -77,9 +78,9 @@ gradesBtn.addEventListener("click", function() {
 profileBtn.addEventListener("click", function() {
     std.viewCoursesGrades(profile, grades, profileBtn, gradesBtn);
 });
-// [gradesBtn, profileBtn].forEach(btn => btn.addEventListener("click", function() {
-//     profile.classList.toggle("hidden");
-//     grades.classList.toggle("hidden");
-//     profileBtn.classList.toggle("active");
-//     gradesBtn.classList.toggle("active");
-// }));
+
+
+let logOutBtn = document.querySelector(".log-out");
+logOutBtn.addEventListener("click", function() {
+    std.logout();
+});
