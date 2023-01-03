@@ -1,4 +1,4 @@
-let admin = new Admin(152, "Ali","ali111", "ali111" )
+let admin = new Admin(152, "Ali", "ali111", "ali111");
 
 let navButtons = document.getElementById("functionalities").children;
 let tchForm = document.getElementById("tchForm");
@@ -10,7 +10,6 @@ let crsEdit = document.getElementById("crsEdit");
 let tchDelete = document.getElementById("tchDelete");
 let stDelete = document.getElementById("stDelete");
 let crsDelete = document.getElementById("crsDelete");
-
 
 //Teacher inputs fields
 let tchName = document.getElementById("tchName");
@@ -41,19 +40,17 @@ let numStd = document.getElementById("crsNumber");
 let crsDesc = document.getElementById("crs-desc");
 let crsContent = document.getElementById("crs-content");
 
+let choices = [];
+tchCourses.addEventListener("change", function () {
+  choices.push(tchCourses.value);
+  console.log(choices);
+});
 
-let choices =[]
-tchCourses.addEventListener("change", function(){
-    choices.push(tchCourses.value)
-    console.log(choices)
-})
-
-let stdChoices =[]
-stdCourses.addEventListener("change", function(){
-    stdChoices.push(stdCourses.value)
-    console.log(stdChoices)
-})
-
+let stdChoices = [];
+stdCourses.addEventListener("change", function () {
+  stdChoices.push(stdCourses.value);
+  console.log(stdChoices);
+});
 
 console.log(navButtons);
 //buttons started from index 1
@@ -70,140 +67,148 @@ let delteCrsBtn = navButtons[9];
 
 let editTch = document.getElementById("editTch");
 
-addTchBtn.addEventListener("click", function(){
-    tchForm.style.display="block";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-    editTch.style.display="none";
+addTchBtn.addEventListener("click", function () {
+  tchForm.style.display = "block";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+  editTch.style.display = "none";
+});
 
+editTchBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "block";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+});
 
+delteTchBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "block";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+});
 
-})
+addStBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "block";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+});
 
+editStBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "block";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+});
 
-editTchBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="block";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-})
+delteStBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "block";
+  crsDelete.style.display = "none";
+});
 
+addCrsBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "block";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+});
 
-delteTchBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="block";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-})
+editCrsBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "block";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "none";
+});
 
-addStBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="block";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-})
-
-
-
-
-editStBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="block";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-})
-
-
-delteStBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="block";
-    crsDelete.style.display="none";
-})
-
-addCrsBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="block";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-})
-
-editCrsBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="block";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="none";
-})
-
-
-delteCrsBtn.addEventListener("click", function(){
-    tchForm.style.display="none";
-    stForm.style.display="none";
-    crsForm.style.display="none";
-    tchEdit.style.display="none";
-    stEdit.style.display="none";
-    crsEdit.style.display="none";
-    tchDelete.style.display="none";
-    stDelete.style.display="none";
-    crsDelete.style.display="block";
-})
+delteCrsBtn.addEventListener("click", function () {
+  tchForm.style.display = "none";
+  stForm.style.display = "none";
+  crsForm.style.display = "none";
+  tchEdit.style.display = "none";
+  stEdit.style.display = "none";
+  crsEdit.style.display = "none";
+  tchDelete.style.display = "none";
+  stDelete.style.display = "none";
+  crsDelete.style.display = "block";
+});
 
 // Add teacher event
-addTch.addEventListener("click", function(){
-
-    let newTch = new Teacher(tchId.value, tchName.value,tchUserName.value, tchPassword.value, choices);
-    admin.addTeacher(newTch);
-})
+addTch.addEventListener("click", function () {
+  let newTch = new Teacher(
+    tchId.value,
+    tchName.value,
+    tchUserName.value,
+    tchPassword.value,
+    choices
+  );
+  admin.addTeacher(newTch);
+});
 
 // Add student event
-addStd.addEventListener("click", function(){
-    let newstd = new Student(stdId.value, stdName.value,stdUserName.value, stdPassword.value, stdCourses);
-    admin.AddStudent(newstd);
-})
+addStd.addEventListener("click", function () {
+  let newstd = new Student(
+    stdId.value,
+    stdName.value,
+    stdUserName.value,
+    stdPassword.value,
+    stdCourses
+  );
+  admin.AddStudent(newstd);
+});
 
 // Add student event
-addCrs.addEventListener("click", function(){
-    let newCrs = new Courses(crsId.value, crsName.value,crTchId.value, numStd.value, crsDesc.value, crsContent.value);
-    admin.addCourse(newCrs);
-})
+addCrs.addEventListener("click", function () {
+  let newCrs = new Courses(
+    crsId.value,
+    crsName.value,
+    crTchId.value,
+    numStd.value,
+    crsDesc.value,
+    crsContent.value
+  );
+  admin.addCourse(newCrs);
+});

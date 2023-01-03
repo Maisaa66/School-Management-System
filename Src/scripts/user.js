@@ -11,9 +11,9 @@ class User {
       localStorage.setItem("stdData", JSON.stringify(this));
       location.assign(url);
     };
-    this.logout = function() {
+    this.logout = function () {
       location.assign("../../index.html");
-    }
+    };
   }
 }
 
@@ -47,27 +47,43 @@ class Admin extends User {
     super(id, name, username, password); // Parent constructor
 
     this.AddStudent = function (Student) {
-      window.localStorage.setItem("Student"+Student.id, JSON.stringify(Student));
+      window.localStorage.setItem(
+        "Student" + Student.id,
+        JSON.stringify(Student)
+      );
       location.reload();
       alert("Student added successfully");
     };
 
     this.addTeacher = function (Teacher) {
-      window.localStorage.setItem("Teacher"+Teacher.id, JSON.stringify(Teacher));
+      window.localStorage.setItem(
+        "Teacher" + Teacher.id,
+        JSON.stringify(Teacher)
+      );
       location.reload();
       alert("Teacher added successfully");
     };
 
     this.addCourse = function (Courses) {
-      window.localStorage.setItem("Courses"+Courses.id, JSON.stringify(Courses));
+      window.localStorage.setItem(
+        "Courses" + Courses.id,
+        JSON.stringify(Courses)
+      );
       location.reload();
       alert("Course added successfully");
     };
 
     this.deleteStudent = function () {};
     this.deleteTeacher = function () {};
-    this.editStudent = function () {};
-    this.editTeacher = function () {};
+    this.editStudent = function (newStData, student_id) {
+      localStorage.setItem("Student" + student_id, JSON.stringify(newStData));
+    };
+    this.editTeacher = function (newTchData, teacher_id) {
+      localStorage.setItem("Teacher" + teacher_id, JSON.stringify(newTchData));
+    };
+    this.editCourse = function (newCrsData, course_id) {
+      localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
+    };
     //edit on teacher
     this.assignTchCourse = function () {};
     //edit on student
