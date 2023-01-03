@@ -1,9 +1,11 @@
 let data;//all data
+let stds = JSON.parse(localStorage.getItem("allStds"));
 let person;
 let username = document.querySelector("#username");
 let password = document.querySelector("#password");
 let logInBtn = document.querySelector(".btn");
 let warning = document.querySelector("#warning");
+
 $.getJSON("./Data/data.json", function(myData) {
     // console.log(myData);
     data = myData;
@@ -37,7 +39,13 @@ function matchCredentials(userType, userN, passW) {
             url = "../Public/student.html"
         break;
     }
-    let users = data[userType];
+    let users;
+    if(userType === "Student") {
+        users = stds;
+    } 
+    else {
+        users = data[userType];
+    }
     let userC;
     users.forEach(user => {
         if(user.userName === userN && user.password === passW) {

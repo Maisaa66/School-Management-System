@@ -1,3 +1,4 @@
+let stdcrs = JSON.parse(localStorage.getItem("allCourses"));
 let std;
 let stdCrsInfo = [];
 
@@ -28,22 +29,34 @@ let coursesDiv = document.querySelector("#courses");
         coursesDiv.innerHTML = "<div class='warning'>You are not enrolled in any courses</div>";
     }
     else {
-        $.getJSON("../Data/data.json", function(myData) {
-            let courses = myData["Courses"];
-            console.log(courses);
-            courses.forEach(course => {
-                if(stdCourses.includes(course.id)) {
-                    course.stdGrade.forEach(grade => {
-                        if(std.id = grade.stdID) {
-                            course.grade = grade.grade;
-                        }
-                    })
-                    stdCrsInfo.push(course);
-                }
-            });
-            viewCourses(stdCrsInfo);
-            updateGrades(stdCrsInfo);
+        let courses = stdcrs;
+        courses.forEach(course => {
+            if(stdCourses.includes(course.id)) {
+                course.stdGrade.forEach(grade => {
+                    if(std.id = grade.stdID) {
+                        course.grade = grade.grade;
+                    }
+                })
+                stdCrsInfo.push(course);
+            }
         });
+        viewCourses(stdCrsInfo);
+        updateGrades(stdCrsInfo);
+        // $.getJSON("../Data/data.json", function(myData) {
+        //     let courses = myData["Courses"];
+        //     courses.forEach(course => {
+        //         if(stdCourses.includes(course.id)) {
+        //             course.stdGrade.forEach(grade => {
+        //                 if(std.id = grade.stdID) {
+        //                     course.grade = grade.grade;
+        //                 }
+        //             })
+        //             stdCrsInfo.push(course);
+        //         }
+        //     });
+        //     viewCourses(stdCrsInfo);
+        //     updateGrades(stdCrsInfo);
+        // });
     }
     std.viewStdProfile(profile, profileBtn);
 }());
@@ -61,7 +74,6 @@ function viewCourses(crs) {
 }
 
 function updateGrades(crs) {
-    console.log(crs);
     crs.forEach(crs => {
         let row = `<tr>
         <td>${crs.name}</td>
@@ -84,3 +96,4 @@ let logOutBtn = document.querySelector(".log-out");
 logOutBtn.addEventListener("click", function() {
     std.logout();
 });
+
