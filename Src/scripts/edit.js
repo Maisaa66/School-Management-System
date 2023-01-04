@@ -122,7 +122,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
           stCoursesData
         );
         admin.editStudent(newStData, student_id);
-        
+        alert("student edited successfully");
 
       } else {
         let newStData = new Student(
@@ -133,7 +133,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
           choices
         );
         admin.editStudent(newStData, student_id);
-        
+        alert("student edited successfully");
+
 
       }
     });
@@ -175,6 +176,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
     crsContent.value = crsData["content"];
 
     editCrs.addEventListener("click", function () {
+
       let newCrsData = new Courses(
         crsData["id"],
         crsName.value,
@@ -183,9 +185,10 @@ for (var i = 0; i < edit_buttons.length; i++) {
         crsDesc.value,
         crsContent.value
       );
+      console.log(newCrsData)
       //   localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
       admin.editCourse(newCrsData, course_id);
-      
+      alert("Course edited successfully");
 
     });
   });
