@@ -81,31 +81,43 @@ class Admin extends User {
 
     this.deleteStudent = function (id) {
       localStorage.removeItem("Student" + id);
+      // location.reload();
+
       updateData();
 
     };
     this.deleteTeacher = function (id) {
       localStorage.removeItem("Teacher" + id);
+      // location.reload();
+
       updateData();
 
     };
     this.deleteCourse = function (id) {
       localStorage.removeItem("Courses" + id);
+      // location.reload();
+
       updateData();
 
     };
     this.editStudent = function (newStData, student_id) {
       localStorage.setItem("Student" + student_id, JSON.stringify(newStData));
+      location.reload();
+
       updateData();
 
     };
     this.editTeacher = function (newTchData, teacher_id) {
       localStorage.setItem("Teacher" + teacher_id, JSON.stringify(newTchData));
+      // location.reload();
+
       updateData();
 
     };
     this.editCourse = function (newCrsData, course_id) {
       localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
+      // location.reload();
+      console.log(course_id);
       updateData();
 
     };
