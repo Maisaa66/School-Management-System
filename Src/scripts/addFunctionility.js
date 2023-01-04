@@ -1,4 +1,16 @@
-let admin = new Admin(152, "Ali", "ali111", "ali111");
+let adminLoggedData = JSON.parse(localStorage.getItem("stdData"));
+let admin = new Admin(
+  adminLoggedData.id,
+  adminLoggedData.name,
+  adminLoggedData.userName,
+  adminLoggedData.password
+);
+
+let adminName = document.getElementById("profile-name");
+adminName.innerHTML = "Hello" + admin.name;
+
+let logOutBtn = document.getElementById("log-out-admin");
+logOutBtn.addEventListener("click", admin.logout);
 
 let navButtons = document.getElementById("functionalities").children;
 let tchForm = document.getElementById("tchForm");
@@ -193,8 +205,6 @@ addTch.addEventListener("click", function () {
     choices
   );
   admin.addTeacher(newTch);
-  
-
 });
 
 // Add student event
@@ -207,8 +217,6 @@ addStd.addEventListener("click", function () {
     stdCourses
   );
   admin.AddStudent(newstd);
-  
-
 });
 
 // Add student event
@@ -222,8 +230,4 @@ addCrs.addEventListener("click", function () {
     crsContent.value
   );
   admin.addCourse(newCrs);
-  
-
 });
-
-
