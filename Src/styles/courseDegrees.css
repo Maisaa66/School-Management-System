@@ -77,3 +77,16 @@
 #grades-table tr:nth-child(even) {
   color: #bc2eff;
 }
+
+.enteredDegree {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#submitDegree {
+  width: 250px;
+  height: 40px;
+  margin-top: 2vh;
+  margin-left: 78.5vw;
+}

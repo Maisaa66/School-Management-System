@@ -29,31 +29,60 @@
               <th>Student Name</th>
               <th>Grade</th>
               <th>Full Mark</th>
-              <th>Status</th>
             </tr>
           </thead>
           <tbody id="grades-row">
-            <tr>
-              <td>courseName</td>
-              <td>90</td>
+            <tr class="actualData">
+              <td class="stdCell">Student-Name</td>
+              <td>
+                <input
+                  type="number"
+                  name="degree"
+                  class="enteredDegree"
+                  max="100"
+                  placeholder="Enter/ Edit degree"
+                />
+              </td>
               <td>100</td>
-              <td>Passed</td>
             </tr>
-            <tr>
+            <!--    <tr>
               <td>courseName</td>
-              <td>90</td>
+              <td>
+                <input
+                  type="number"
+                  name="degree"
+                  class="enteredDegree"
+                  max="100"
+                  placeholder="Enter/ Edit degree"
+                />
+              </td>
               <td>100</td>
-              <td>Passed</td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!--       <tr>
               <td>courseName</td>
-              <td>90</td>
+              <td>
+                <input
+                  type="number"
+                  name="degree"
+                  class="enteredDegree"
+                  max="100"
+                  placeholder="Enter/ Edit degree"
+                />
+              </td>
               <td>100</td>
-              <td>Passed</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
+        <button id="submitDegree">Submit</button>
       </div>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Src/scripts/localStorage.js" type="module"></script>
+    <script src="../Src/scripts/updateData.js" ></script>
+    <script src="../Src/scripts/degreesTable.js"></script>
   </body>
 </html>

@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.container {
+  margin: 10px auto;
+}
 aside {
   border: solid 2px #7400ac;
   border-radius: 20px;
@@ -9,7 +13,6 @@ aside {
   height: 90vh;
   margin: 10px;
 }
-
 #functionalities {
   list-style-type: none;
   margin-left: 0px;
@@ -31,7 +34,7 @@ section {
   padding-bottom: 30px;
 }
 
-.container {
+.coursesContainer {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -42,7 +45,7 @@ section {
 .course {
   width: 25vw;
 
-border: 2px solid #c0a2f8;
+  border: 2px solid #c0a2f8;
   border-radius: 20px;
   margin-bottom: 25px;
   padding: 20px;
@@ -113,4 +116,33 @@ h3 {
 .btnContainer button {
   width: 150px;
   height: 30px;
+}
+
+.editContentContainer {
+  display: none;
+}
+
+.shown {
+  display: block;
+  width: 60vw;
+  padding: 25px 5vw;
+  margin: auto;
+  border: solid #7400ac;
+}
+
+.inputGroup {
+  display: flex;
+  margin: 5vh 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputGroup input {
+  margin-left: 25px;
+}
+
+#replaceContent {
+  width: 250px;
+  height: 40px;
+  margin-left: 33.5vw;
 }

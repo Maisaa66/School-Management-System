@@ -21,7 +21,7 @@ let coursesDiv = document.querySelector("#courses");
     welcome.innerText = "Welcome " + stdData.name.slice(0, stdData.name.indexOf(" "));
     stdName.innerText = std.name;
     stdID.innerText = std.id;
-    console.log(std);
+    // console.log(std);
     numCourses.innerText = std.coursesId.length;
 
 
@@ -31,20 +31,58 @@ let coursesDiv = document.querySelector("#courses");
     }
     else {
         // console.log(courses)
+        //student courses -> stdCourses
+        //courses -> allcourses
         let courses = stdcrs;
         courses.forEach(course => {
             if(stdCourses.includes(course.id)) {
-                course.stdGrade.forEach(grade => {
-                    // console.log(std.id)
-                    // console.log(grade.stdID)
-                    // console.log(std.id === grade.stdID)
-                    if(std.id === grade.stdID) {
-                        course.grade = grade.grade;
+                console.log(stdCourses);
+                console.log(course.id);
+                let stdIdArr=[];
+                let stdGradeArr=[];
+                let stdIndex;
+                for(let index=0;index<course.stdGrade.length;index++){
+                    stdIdArr.push(course.stdGrade[index].stdID);
+                    stdGradeArr.push(course.stdGrade[index].grade);
+                    if(std.id===course.stdGrade[index].stdID){
+                        stdIndex=index;
                     }
-                    else {
-                        course.grade = "No Grade Yet";
-                    }
-                })
+                }
+
+                console.log(stdIdArr);
+                console.log(stdGradeArr);
+                console.log(stdIndex);
+                
+                if(stdIndex!==undefined){
+                    course.grade = stdGradeArr[stdIndex];
+
+                }
+                else{
+                    course.grade = "No Grade Yet";
+                }
+                
+
+
+                // let grades = course.stdGrade;
+                // let gradesIds = [];
+                // grades.forEach(grade => gradesIds.push(grade.stdID));
+                // console.log(gradesIds)
+                // if(gradesIds.includes(std.id)) {
+                //     course.grade = grades.grade;
+                // }
+                // course.stdGrade.forEach(grade => {
+                //     console.log(std.id)
+                //     console.log(grade.stdID)
+                //     console.log(std.id === grade.stdID)
+
+                //     if(std.id === grade.stdID) {
+                //         course.grade = grade.grade;
+                        
+                //     }
+                //     else {
+                //         course.grade = "No Grade Yet";
+                //     }
+                // })
                 console.log(course)
                 stdCrsInfo.push(course);
             }
