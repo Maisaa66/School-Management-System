@@ -54,13 +54,13 @@ let crsContent = document.getElementById("crs-content");
 
 let choices = [];
 tchCourses.addEventListener("change", function () {
-  choices.push(tchCourses.value);
+  choices.push(parseInt(tchCourses.value));
   console.log(choices);
 });
 
 let stdChoices = [];
 stdCourses.addEventListener("change", function () {
-  stdChoices.push(stdCourses.value);
+  stdChoices.push(parseInt(stdCourses.value));
   console.log(stdChoices);
 });
 
@@ -214,7 +214,7 @@ addStd.addEventListener("click", function () {
     stdName.value,
     stdUserName.value,
     stdPassword.value,
-    stdCourses
+    stdChoices
   );
   admin.AddStudent(newstd);
 });

@@ -17,26 +17,35 @@ let coursesDiv = document.querySelector("#courses");
 
 ;(function() {
     let stdData = JSON.parse(localStorage.getItem("stdData"));
-    std = new Student(stdData.id, stdData.name,"", "", stdData.courses);
+    std = new Student(stdData.id, stdData.name,"", "", stdData.coursesId);
     welcome.innerText = "Welcome " + stdData.name.slice(0, stdData.name.indexOf(" "));
     stdName.innerText = std.name;
     stdID.innerText = std.id;
-    numCourses.innerText = std.courses.length;
+    console.log(std);
+    numCourses.innerText = std.coursesId.length;
 
 
-    let stdCourses = std.courses;
+    let stdCourses = std.coursesId;
     if(stdCourses.length === 0) {
         coursesDiv.innerHTML = "<div class='warning'>You are not enrolled in any courses</div>";
     }
     else {
+        // console.log(courses)
         let courses = stdcrs;
         courses.forEach(course => {
             if(stdCourses.includes(course.id)) {
                 course.stdGrade.forEach(grade => {
-                    if(std.id = grade.stdID) {
+                    // console.log(std.id)
+                    // console.log(grade.stdID)
+                    // console.log(std.id === grade.stdID)
+                    if(std.id === grade.stdID) {
                         course.grade = grade.grade;
                     }
+                    else {
+                        course.grade = "No Grade Yet";
+                    }
                 })
+                console.log(course)
                 stdCrsInfo.push(course);
             }
         });
@@ -65,7 +74,7 @@ function viewCourses(crs) {
     crs.forEach(crs => {
         let course = `<div class="course">
         <h2 class="courseName">${crs.name}</h2>
-        <p class="courseId">Course Id: ${crs.crsID}</p>
+        <p class="courseId">Course Id: ${crs.id}</p>
         <p class="description">${crs.description
         }</p>
     </div>`;

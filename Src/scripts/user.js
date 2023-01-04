@@ -5,8 +5,6 @@ class User {
     this.userName = userN ? userN : name;
     this.password = passW ? passW : name + 123456;
     this.coursesId = crss ? crss : [];
-
-
     // Login method
     this.login = function (url) {
       localStorage.setItem("stdData", JSON.stringify(this));

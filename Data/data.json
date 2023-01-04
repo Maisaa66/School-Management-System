@@ -37,49 +37,35 @@
         "id":1024,
         "userName":"nour1024",
         "password":"nour123456",
-        "coursesId":[603, 402]
+        "coursesId":[603, 606]
        },
 
        {"name":"Basel Hesham",
        "id":1234,
        "userName":"basel1234",
        "password":"basel123456",
-       "coursesId":[606, 402]
+       "coursesId":[404]
       },
 
       {"name":"Reem Gamil",
       "id":7045,
       "userName":"reem7045",
       "password":"reem123456",
-      "coursesId":[606, 404]
+      "coursesId":[402]
      },
 
      {"name":"Rawan Hassan",
      "id":7066,
      "userName":"rawan7066",
      "password":"rawan123456",
-     "coursesId":[402, 404]
+     "coursesId":[603]
     },
-
-    {"name":"Nouran Hassan",
-    "id":1045,
-    "userName":"nouran1045",
-    "password":"nouran123456",
-    "coursesId":[603, 606]
-   },
-
-   {"name":"Eslam Essam",
-   "id":6754,
-   "userName":"eslam6754",
-   "password":"eslam123456",
-   "coursesId":[603, 404]
-  },
   
   {"name":"Toaa Essam",
   "id":2003,
   "userName":"toaa2003",
   "password":"toaa123456",
-  "coursesId":[402, 603]
+  "coursesId":[402]
  }
 
     ],
@@ -105,7 +91,7 @@
          "content":" Fundamental programming constructs, Fundamental data structures",
         "stdGrade":[
             {"stdID":2003, "grade":95 },
-            {"stdID":6754, "grade":89}
+            {"stdID":7045, "grade":89}
           ]
         },
         {"name":"Soft skills",
@@ -115,7 +101,7 @@
         "description":"This course will focuses on developing skills such as communication, teamwork and problem solving",
         "content":" formal and informal communication, code switching, strategies for communicating",
        "stdGrade":[
-           {"stdID":1045, "grade":85 },
+           {"stdID":1024, "grade":85 },
            {"stdID":7066, "grade":88}
          ]
        },
@@ -126,7 +112,7 @@
        "description":"The course focuses on the understanding and practical mastery of object-oriented concepts",
        "content":"Classes, Objects, Data abstraction",
       "stdGrade":[
-          {"stdID":7045, "grade":85 },
+          {"stdID":1023, "grade":85 },
           {"stdID":1024, "grade":88}
         ]
       }         
