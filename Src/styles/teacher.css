@@ -1,0 +1,151 @@
+main{
+    margin-left: 5%;
+}
+
+/*--------------------------- Bread Crumb --------------------------*/
+
+.breadCrumb {
+    height: 60px;
+    background-color: #BC2EFF;
+    padding: 0 30px;
+    justify-content: flex-start;
+    color: white;
+}
+
+.breadCrumb button {
+    background: none;
+    border: none;
+    padding: 10px;
+    color: #fFFFFf;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.breadCrumb button.active {
+    color: #F89F5B;
+}
+
+/*------------------------- Teacher Info ------------------------*/
+
+.teacher-info {
+    gap: 40px;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+/*------------------ user image ------------------*/
+
+.userImage {
+    width: 100px;
+}
+
+.userImage img {
+    width: 100%;
+}
+
+/*---------------- teacher data -----------------*/
+
+.teacherData h1 {
+    color: #7400AC;
+    margin-bottom: 20px;
+}
+
+.teacherData .label {
+    color: #F89F5B;
+    padding-right: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.teacherData p {
+    margin-bottom: 10px;
+}
+
+.teacherData .ID, .studentData .numCourses {
+    color: #BC2EFF;
+    font-size: 18px;
+}
+
+/*------------------ courses -------------------*/
+
+.courses {
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.course {
+    width: 30%;
+    border: 1px solid #7400AC;
+    border-radius: 15px;
+    padding: 20px 40px;
+    margin-bottom: 5%;
+
+    min-height: fit-content;
+}
+
+.course h2{
+    color: #BC2EFF;
+    text-transform: capitalize;
+}
+
+.course p {
+    margin: 20px 0;
+    color: #F89F5B;
+}
+
+p.description {
+    color: black;
+}
+
+#description_editor{
+    width: 100%;
+    height: 50%;
+    font-size: 18px;
+    display: none;
+}
+
+.btn{
+    padding: 7px 15px;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 25px;
+    float: left;
+}
+
+#SaveBtn{
+    margin-left: 110px;
+    display: none;
+}
+.student-info {
+    gap: 40px;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+.userImage {
+    width: 100px;
+}
+.userImage img {
+    width: 100%;
+}
+
+.studentData h1 {
+    color: #7400AC;
+    margin-bottom: 20px;
+}
+
+.studentData .label {
+    color: #F89F5B;
+    padding-right: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.studentData p {
+    margin-bottom: 10px;
+}
+.studentData .ID, .studentData .numCourses {
+    color: #BC2EFF;
+    font-size: 18px;
+}

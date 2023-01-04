@@ -83,10 +83,11 @@
   text-align: center;
   padding: 10px 0;
 }
-
-#submitDegree {
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+}
+#submitDegree, #backBtn {
   width: 250px;
   height: 40px;
-  margin-top: 2vh;
-  margin-left: 78.5vw;
 }

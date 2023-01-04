@@ -141,8 +141,7 @@ h3 {
   margin-left: 25px;
 }
 
-#replaceContent {
+#replaceContent, .inputGroup #backBtn {
   width: 250px;
   height: 40px;
-  margin-left: 33.5vw;
 }
