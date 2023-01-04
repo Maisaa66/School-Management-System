@@ -1,3 +1,7 @@
+let stdData = JSON.parse(localStorage.getItem("stdData"));
+let std = new Teacher(stdData.id, stdData.name,"", "", stdData.coursesId);
+
+
 let enteredDegree = document.getElementsByClassName("enteredDegree"),
   submitDegree = document.getElementById("#submitDegree"),
   nameCell = document.getElementsByClassName("stdCell"),
@@ -84,3 +88,13 @@ document.getElementById("submitDegree").onclick = function () {
 
   updateData();
 };
+let logOutBtn = document.querySelector(".log-out");
+console.log(logOutBtn);
+logOutBtn.addEventListener("click", function() {
+    std.logout();
+});
+
+document.getElementById("backBtn").onclick = function () {
+  history.back();
+};
+

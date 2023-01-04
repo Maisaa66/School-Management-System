@@ -12,15 +12,9 @@
     <nav class="navBar flex-row">
       <h1>Horas International School</h1>
       <div>
-        <div id="welcome-msg">Welcome Mahmoud</div>
         <a class="log-out">Log Out</a>
       </div>
     </nav>
-    <header class="breadCrumb flex-row">
-      <button id="profileBtn" class="active">Courses</button>
-      <span>/</span>
-      <button id="gradesBtn">Grades</button>
-    </header>
     <main>
       <div id="grades">
         <table id="grades-table">
@@ -73,7 +67,11 @@
             </tr> -->
           </tbody>
         </table>
-        <button id="submitDegree">Submit</button>
+        <div class="btnContainer">
+          <button id="backBtn">Back</button>
+
+          <button id="submitDegree">Submit</button>
+        </div>
       </div>
     </main>
     <script
@@ -83,6 +81,7 @@
     ></script>
     <script src="../Src/scripts/localStorage.js" type="module"></script>
     <script src="../Src/scripts/updateData.js" ></script>
+    <script src="../Src/scripts/user.js"></script>
     <script src="../Src/scripts/degreesTable.js"></script>
   </body>
 </html>

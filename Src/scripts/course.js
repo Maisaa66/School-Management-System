@@ -1,3 +1,6 @@
+let stdData = JSON.parse(localStorage.getItem("stdData"));
+let std = new Teacher(stdData.id, stdData.name,"", "", stdData.coursesId);
+
 let course = document.getElementsByClassName("course"),
   courseName = document.getElementsByClassName("courseName"),
   courseId = document.getElementsByClassName("courseId"),
@@ -61,6 +64,7 @@ admitBtn.onclick = function () {
     // console.log(clickedCoursekey);
   }
   localStorage.setItem(clickedCoursekey, JSON.stringify(dataAsObject));
+  location.reload();
 };
 
 /////////////degreeees
@@ -94,3 +98,16 @@ for (let i = 0; i < coursesIds.length; i++) {
     
   };
 }
+
+document.getElementById("backBtn").onclick = function () {
+  coursesContainer.style.display = "flex";
+
+  courseContentEditor.classList.remove("shown");
+};
+
+
+let logOutBtn = document.querySelector(".log-out");
+console.log(logOutBtn);
+logOutBtn.addEventListener("click", function() {
+    std.logout();
+});

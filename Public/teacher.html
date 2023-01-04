@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../Src/styles/main.css" rel="stylesheet">
+    
+    <!-- <link href="../Src/styles/student.css" rel="stylesheet"> -->
+    <link href="../Src/styles/teacher.css" rel="stylesheet">
+    <link href="../Src/styles/courses.css" rel="stylesheet"></link>
+
+    <title>Horas International School</title>
+
+</head>
+
+<body>
+
+    <!----------------------------------- Navbar ----------------------------------->
+
+    <nav class="navBar flex-row">
+        <h1>Horas International School</h1>
+        <div>
+            <div id="welcome-msg"> Welcome Ahmed </div>
+            <a class="log-out">Log Out</a>
+        </div>
+    </nav>
+
+    <!-------------------------------- Bread Crumb -------------------------------->
+
+    <header class="breadCrumb flex-row">
+        <button id="profileBtn">Profile</button>
+    </header>
+
+    <!----------------------------------- Main ------------------------------------>
+
+    <main>
+
+        <!---------------------------- Profile ---------------------------->
+
+        <div id="profile">
+
+            <div class="student-info flex-row">
+
+                <!-------- user image -------->
+
+                <div class="userImage">
+                    <img src="../Assets/img/user.png">
+                </div>
+
+                <!-------- teacher data -------->
+
+                <div class="studentData">
+                    <h1 id="studentName"></h1>
+                    <p><span class="label">Id:</span><span class="ID" id="ID"></span></p>
+                    <p><span class="label">No. Courses:</span><span class="numCourses" id="numCourses"></span></p>
+                </div>
+
+            </div>
+
+            <!----------- courses ----------->
+            <h2>My Courses</h2>
+
+            <div class="courses  flex-row" id="courses">
+                <div class="container">
+                    <!-- ---------------- Course 1 ----------------- -->
+                    <div class="coursesContainer">
+                      <div class="course">
+                        <h2 class="courseName">course1</h2>
+                        <p class="courseId">Course ID:<span>12</span></p>
+                        <p class="teacherId">Teacher ID: <span>201</span></p>
+                        <section class="courseStudents">
+                          <h3>Number of Students:</h3>
+                          <p class="numOfStudents">4</p>
+                        </section>
+                        <section class="courseDesc">
+                          <h3>Course Description</h3>
+                          <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                            at molestias placeat doloremque quisquam officiis doloribus
+                            earum vitae dicta veniam modi, tenetur id rem accusantium,
+                            voluptatum praesentium obcaecati fugiat numquam?
+                          </p>
+                        </section>
+                        <section class="contentContainer">
+                          <h3>Course Content</h3>
+                          <ul class="courseContent"></ul>
+                        </section>
+                        <setion class="btnContainer">
+                          <button class="btn editCourse">Edit Course</button>
+                          <button class="btn viewStudents">View Students</button></setion
+                        >
+                      </div>
+                      <!-- -----------------------------
+            
+                    Course 2
+                    
+                    
+                     
+                                            ------------------------------------------------- -->
+            
+                      <div class="course">
+                        <h2 class="courseName">course1</h2>
+                        <p class="courseId">Course ID:<span>12</span></p>
+                        <p class="teacherId">Teacher ID: <span>201</span></p>
+                        <section class="courseStudents">
+                          <h3>Number of Students:</h3>
+                          <p class="numOfStudents">4</p>
+                        </section>
+                        <section class="courseDesc">
+                          <h3>Course Description</h3>
+                          <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                            at molestias placeat doloremque quisquam officiis doloribus
+                            earum vitae dicta veniam modi, tenetur id rem accusantium,
+                            voluptatum praesentium obcaecati fugiat numquam?
+                          </p>
+                        </section>
+                        <section class="contentContainer">
+                          <h3>Course Content</h3>
+                          <ul class="courseContent"></ul>
+                        </section>
+            
+                        <setion class="btnContainer">
+                          <button class="btn editCourse">Edit Course</button>
+                          <button class="btn viewStudents">View Students</button></setion
+                        >
+                      </div>
+                      <!-- ---------------- Course 3 ----------------- -->
+            
+                      <div class="course">
+                        <h2 class="courseName">course1</h2>
+                        <p class="courseId">Course ID:<span>12</span></p>
+                        <p class="teacherId">Teacher ID: <span>201</span></p>
+                        <section class="courseStudents">
+                          <h3>Number of Students:</h3>
+                          <p class="numOfStudents">4</p>
+                        </section>
+                        <section class="courseDesc">
+                          <h3>Course Description</h3>
+                          <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                            at molestias placeat doloremque quisquam officiis doloribus
+                            earum vitae dicta veniam modi, tenetur id rem accusantium,
+                            voluptatum praesentium obcaecati fugiat numquam?
+                          </p>
+                        </section>
+                        <section class="contentContainer">
+                          <h3>Course Content</h3>
+                          <ul class="courseContent"></ul>
+                        </section>
+            
+                        <setion class="btnContainer">
+                          <button class="btn editCourse">Edit Course</button>
+                          <button class="btn viewStudents">View Students</button></setion
+                        >
+                      </div>
+                      <!-- ---------------- Course 4 ----------------- -->
+                      <div class="course">
+                        <h2 class="courseName">course1</h2>
+                        <p class="courseId">Course ID:<span>12</span></p>
+                        <p class="teacherId">Teacher ID: <span>201</span></p>
+                        <section class="courseStudents">
+                          <h3>Number of Students:</h3>
+                          <p class="numOfStudents">4</p>
+                        </section>
+                        <section class="courseDesc">
+                          <h3>Course Description</h3>
+                          <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                            at molestias placeat doloremque quisquam officiis doloribus
+                            earum vitae dicta veniam modi, tenetur id rem accusantium,
+                            voluptatum praesentium obcaecati fugiat numquam?
+                          </p>
+                        </section>
+                        <section class="contentContainer">
+                          <h3>Course Content</h3>
+                          <ul class="courseContent"></ul>
+                        </section>
+            
+                        <setion class="btnContainer">
+                          <button class="btn editCourse">Edit Course Content</button>
+                          <button class="btn viewStudents">View Students</button></setion
+                        >
+                      </div>
+                    </div>
+                    <div class="editContentContainer">
+                      <div class="inputGroup">
+                        <label for="one">Chapter 1</label>
+                        <textarea name="Chapter 1" id="one" rows="10" cols="70"></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="two">Chapter 2</label>
+                        <textarea name="Chapter 2" id="two" rows="10" cols="70"></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="three">Chapter 3</label>
+                        <textarea
+                          name="Chapter 3"
+                          id="three"
+                          rows="10"
+                          cols="70"
+                        ></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="four">Chapter 4</label>
+                        <textarea rows="10" cols="70" name="Chapter 4" id="four"></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="five">Chapter 5</label>
+                        <textarea name="Chapter 5" id="five" rows="10" cols="70"></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="six">Chapter 6</label>
+                        <textarea name="Chapter 6" id="six" rows="10" cols="70"></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="seven">Chapter 7</label>
+                        <textarea
+                          name="Chapter 7"
+                          id="seven"
+                          rows="10"
+                          cols="70"
+                        ></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="eight">Chapter 8</label>
+                        <textarea
+                          name="Chapter 8"
+                          id="eight"
+                          rows="10"
+                          cols="70"
+                        ></textarea>
+                      </div>
+                      <div class="inputGroup">
+                        <button id="backBtn">Back</button>
+            
+                        <button id="replaceContent">Admit</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- <div class="course">
+
+                    <h2 >Geography</h2>
+
+                    <p class="courseId">Id: C-1112</p>
+
+                    <p class="description" id="course_description">Mandatory Course, consists of 60 hrs.</p>
+                    <textarea type="text" id="description_editor"></textarea>
+                    
+                    <button id="editCourseContentBtn" class="btn"> Edit Content </button>
+                    <button id="ViewGradesBtn" class="btn"> View Grades </button>
+                    <button id="SaveBtn" class="btn"> Save </button>
+                    
+
+                </div> -->
+
+            </div>
+        
+        </div>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Src/scripts/localStorage.js" type="module"></script>
+    <script src="../Src/scripts/updateData.js" ></script>
+    <script src="../Src/scripts/user.js"></script>
+    <script src="../Src/scripts/course.js"></script>
+    <script src="../Src/scripts/teacher.js"></script>
+</body>
+</html>
