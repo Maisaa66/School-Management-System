@@ -52,23 +52,20 @@ for (var i = 0; i < edit_buttons.length; i++) {
           tchCoursesData
         );
         admin.editTeacher(newTchData, teacher_id);
-        
-
       } else {
+        let newCourses = tchCoursesData.concat(choices);
         let newTchData = new Teacher(
           tchData["id"],
           tchName.value,
           tchUserName.value,
           tchPassword.value,
-          choices
+          newCourses
         );
         localStorage.setItem(
           "Teacher" + teacher_id,
           JSON.stringify(newTchData)
         );
         admin.editTeacher(newTchData, teacher_id);
-        
-
       }
     });
   });
@@ -97,7 +94,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
     editStd.style.display = "block";
 
     stData = JSON.parse(stData);
-   
+
     stdName.value = stData["name"];
     stdId.disabled = true;
     stdPassword.value = stData["password"];
@@ -113,7 +110,8 @@ for (var i = 0; i < edit_buttons.length; i++) {
     }
 
     editStd.addEventListener("click", function () {
-      if (choices.length == 0) {
+      console.log(stCoursesData);
+      if (stdChoices.length == 0) {
         let newStData = new Student(
           stData["id"],
           stdName.value,
@@ -123,23 +121,22 @@ for (var i = 0; i < edit_buttons.length; i++) {
         );
         admin.editStudent(newStData, student_id);
         alert("student edited successfully");
-
       } else {
+        let newCourses = stCoursesData.concat(stdChoices);
         let newStData = new Student(
           stData["id"],
           stdName.value,
           stdUserName.value,
           stdPassword.value,
-          choices
+          newCourses
         );
         admin.editStudent(newStData, student_id);
         alert("student edited successfully");
-
-
       }
     });
 
-    stCoursesData=[];
+    // stCoursesData = [];
+    console.log(stCoursesData);
   });
 }
 
@@ -176,7 +173,6 @@ for (var i = 0; i < edit_buttons.length; i++) {
     crsContent.value = crsData["content"];
 
     editCrs.addEventListener("click", function () {
-
       let newCrsData = new Courses(
         crsData["id"],
         crsName.value,
@@ -185,11 +181,10 @@ for (var i = 0; i < edit_buttons.length; i++) {
         crsDesc.value,
         crsContent.value
       );
-      console.log(newCrsData)
+      console.log(newCrsData);
       //   localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
       admin.editCourse(newCrsData, course_id);
       alert("Course edited successfully");
-
     });
   });
 }
