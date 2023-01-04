@@ -1,3 +1,7 @@
+let gradeTable = document.querySelector("#grades-row"); 
+let selectedCourse = getCookie("selectedCourse");
+let theCourse = JSON.parse(localStorage.getItem(selectedCourse));
+let thecourseGrades = theCourse.stdGrade;
 let stdData = JSON.parse(localStorage.getItem("stdData"));
 let std = new Teacher(stdData.id, stdData.name,"", "", stdData.coursesId);
 
@@ -30,71 +34,92 @@ function getCookie(cname) {
   }
   return "";
 }
-studentsCounter = getCookie("studentsCounter");
-for (let i = 0; i < Number(studentsCounter); i++) {
-  studentsIds.push(getCookie("StudentCode" + (i + 1)));
-}
-for (let i = 0; i < localStorage.length; i++) {
-  let studentasObject;
-  if (localStorage.key(i).startsWith("Student")) {
-    let studentasString = localStorage.key(i);
-    studentasObject = JSON.parse(localStorage.getItem(studentasString));
-    console.log(studentasObject["name"]);
-    console.log(studentsIds.includes(String(studentasObject["id"])));
-    console.log(studentsIds);
-    console.log(String(studentasObject["id"]));
-    if (studentsIds.includes(String(studentasObject["id"]))) {
-      studentsNames.push(studentasObject["name"]);
-    }
-  }
-}
+// studentsCounter = getCookie("studentsCounter");
+// for (let i = 0; i < Number(studentsCounter); i++) {
+//   studentsIds.push(getCookie("StudentCode" + (i + 1)));
+// }
+// for (let i = 0; i < localStorage.length; i++) {
+//   let studentasObject;
+//   if (localStorage.key(i).startsWith("Student")) {
+//     let studentasString = localStorage.key(i);
+//     studentasObject = JSON.parse(localStorage.getItem(studentasString));
+//     console.log(studentasObject["name"]);
+//     console.log(getCookie("StudentCode" + (i + 1)))
+//     console.log(studentsIds.includes(String(studentasObject["id"])));
+//     console.log(studentsIds);
+//     console.log(String(studentasObject["id"]));
+//     if (studentsIds.includes(String(studentasObject["id"]))) {
+//       studentsNames.push(studentasObject["name"]);
+//     }
+//   }
+// }
 
-let node, clone;
+// let node, clone;
 
-for (let i = 0; i < Number(studentsCounter); i++) {
-  node = document.querySelector(".actualData"); //check syntax for rows
-  console.log(node);
-  let clonesNum = Number(studentsCounter) - 1;
-  if (i < clonesNum) {
-    clone = node.cloneNode(true);
-    document.querySelector("tbody").appendChild(clone);
-  }
+// for (let i = 0; i < Number(studentsCounter); i++) {
+//   node = document.querySelector(".actualData"); //check syntax for rows
+//   console.log(node);
+//   let clonesNum = Number(studentsCounter) - 1;
+//   if (i < clonesNum) {
+//     clone = node.cloneNode(true);
+//     document.querySelector("tbody").appendChild(clone);
+//   }
 
-  let degreeCell = document.getElementsByClassName("enteredDegree")[i];
-  degreeCell.value = getCookie("StudentDegree" + (i + 1));
-  nameCell[i].innerText = studentsNames[i];
-}
-let selectedCourse = getCookie("selectedCourse");
+//   let degreeCell = document.getElementsByClassName("enteredDegree")[i];
+//   degreeCell.value = getCookie("StudentDegree" + (i + 1));
+//   nameCell[i].innerText = studentsNames[i];
+// }
 
 /* --------- --------- */
-document.getElementById("submitDegree").onclick = function () {
-  let degreeCell = document.getElementsByClassName("enteredDegree");
+// document.getElementById("submitDegree").onclick = function () {
+//   let newcourse = theCourse;
+//   let updated = document.querySelectorAll(".enteredDegree")
+//   let ids = document.querySelectorAll(".ids");
+//   let newgrades = [];
+//   console.log(thecourseGrades, updated, ids);
+//   for(let i = 0; i < updated.length; i++) {
+//     newgrades.push({"stdID": ids[i].innerText, "grade": updated[i].value})
+//   }
+//   newcourse.stdGrade = newgrades;
+//   localStorage.setItem(selectedCourse, JSON.stringify(newcourse));
+// }
 
-  for (let x = 0; x < localStorage.length; x++) {
-    let courseasObject = JSON.parse(localStorage.getItem(localStorage.key(x)));
-    if (localStorage.key(x) == getCookie("selectedCourse")) {
-      console.log(JSON.parse(localStorage.getItem(localStorage.key(x))));
-      let key = localStorage.key(x);
-      for (let x = 0; x < studentsIds.length; x++) {
-        courseasObject["stdGrade"][x]["grade"] = degreeCell[x].value;
-        console.log(courseasObject);
-        localStorage.setItem(
-          key,
-          JSON.stringify(courseasObject)
-        );
-      }
-    }
+document.getElementById("submitDegree").addEventListener("click", function() {
+  let newcourse = theCourse;
+  let updated = document.querySelectorAll(".enteredDegree")
+  let ids = document.querySelectorAll(".ids");
+  let newgrades = [];
+  console.log(thecourseGrades, updated, ids);
+  for(let i = 0; i < updated.length; i++) {
+    newgrades.push({"stdID": parseInt(ids[i].innerText), "grade": parseInt(updated[i].value)})
   }
-
-  updateData();
-};
+  newcourse.stdGrade = newgrades;
+  localStorage.setItem(selectedCourse, JSON.stringify(newcourse));
+  zeft();
+})
 let logOutBtn = document.querySelector(".log-out");
 console.log(logOutBtn);
 logOutBtn.addEventListener("click", function() {
     std.logout();
+    updateData();
 });
 
 document.getElementById("backBtn").onclick = function () {
   history.back();
 };
 
+function zeft() {
+  updateData();
+} 
+//My Implemnt
+
+console.log(theCourse);
+
+thecourseGrades.forEach(crsg => {
+  let row = `<tr>
+        <td class="ids">${crsg.stdID}</td>
+        <td><input class="enteredDegree" value="${crsg.grade}" type="number"></td>
+        <td>100</td>
+    </tr>`;
+  gradeTable.insertAdjacentHTML("afterbegin", row);
+})

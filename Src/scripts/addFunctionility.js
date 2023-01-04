@@ -217,6 +217,12 @@ addStd.addEventListener("click", function () {
     stdChoices
   );
   admin.AddStudent(newstd);
+  for(let i =0; i< stdChoices.length; i++) {
+    let coursg= JSON.parse(localStorage.getItem("Courses" + stdChoices[i]));
+    let newG = {"stdID": stdId.value, "grade": 0}
+    coursg.stdGrade.push(newG);
+    localStorage.setItem("Courses" + stdChoices[i], JSON.stringify(coursg));
+  }
 });
 
 // Add student event
