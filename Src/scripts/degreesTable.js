@@ -94,7 +94,7 @@ document.getElementById("submitDegree").addEventListener("click", function() {
   }
   newcourse.stdGrade = newgrades;
   localStorage.setItem(selectedCourse, JSON.stringify(newcourse));
-  zeft();
+  updating();
 })
 let logOutBtn = document.querySelector(".log-out");
 logOutBtn.addEventListener("click", function() {
@@ -105,7 +105,7 @@ document.getElementById("backBtn").onclick = function () {
   history.back();
 };
 
-function zeft() {
+function updating() {
   updateData();
 } 
 //My Implemnt

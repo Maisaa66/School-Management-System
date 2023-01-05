@@ -1,5 +1,6 @@
 let data; //all data
 let stds = JSON.parse(localStorage.getItem("allStds"));
+let tchs = JSON.parse(localStorage.getItem("allTchs"));
 let person;
 let username = document.querySelector("#username");
 let password = document.querySelector("#password");
@@ -40,7 +41,11 @@ function matchCredentials(userType, userN, passW) {
   let users;
   if (userType === "Student") {
     users = stds;
-  } else {
+  } 
+  if(userType === "Teacher") {
+    users = tchs;
+  }
+  else {
     users = data[userType];
   }
   let userC;
