@@ -11,7 +11,6 @@ for (var i = 0; i < teacher_delete_buttons.length; i++) {
     var row_index = row.rowIndex;
 
     var teacher_id = teacher_table_delete.rows[row_index].cells[1].innerText;
-    console.log(teacher_id);
     admin.deleteTeacher(teacher_id);
     row.style.display = "none";
     
@@ -34,8 +33,6 @@ for (var i = 0; i < student_delete_buttons.length; i++) {
     var student_id = student_table_delete.rows[row_index].cells[1].innerText;
     admin.deleteStudent(student_id);
     row.style.display = "none";
-    
-
   });
 }
 

@@ -55,7 +55,6 @@ let crsContent = document.getElementById("crs-content");
 let choices = [];
 tchCourses.addEventListener("change", function () {
   choices.push(parseInt(tchCourses.value));
-  console.log(choices);
 });
 
 let stdChoices = [];
@@ -64,7 +63,6 @@ stdCourses.addEventListener("change", function () {
   console.log(stdChoices);
 });
 
-console.log(navButtons);
 //buttons started from index 1
 
 let addTchBtn = navButtons[1];

@@ -36,8 +36,6 @@ let coursesDiv = document.querySelector("#courses");
         let courses = stdcrs;
         courses.forEach(course => {
             if(stdCourses.includes(course.id)) {
-                console.log(stdCourses);
-                console.log(course.id);
                 let stdIdArr=[];
                 let stdGradeArr=[];
                 let stdIndex;
@@ -49,9 +47,6 @@ let coursesDiv = document.querySelector("#courses");
                     }
                 }
 
-                console.log(stdIdArr);
-                console.log(stdGradeArr);
-                console.log(stdIndex);
                 
                 if(stdIndex!==undefined){
                     course.grade = stdGradeArr[stdIndex];
@@ -83,7 +78,6 @@ let coursesDiv = document.querySelector("#courses");
                 //         course.grade = "No Grade Yet";
                 //     }
                 // })
-                console.log(course)
                 stdCrsInfo.push(course);
             }
         });

@@ -110,7 +110,6 @@ class Admin extends User {
     this.editCourse = function (newCrsData, course_id) {
       localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
       // location.reload();
-      console.log(course_id);
       updateData();
     };
   }

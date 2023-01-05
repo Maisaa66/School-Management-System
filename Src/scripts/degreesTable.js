@@ -89,7 +89,6 @@ document.getElementById("submitDegree").addEventListener("click", function() {
   let updated = document.querySelectorAll(".enteredDegree")
   let ids = document.querySelectorAll(".ids");
   let newgrades = [];
-  console.log(thecourseGrades, updated, ids);
   for(let i = 0; i < updated.length; i++) {
     newgrades.push({"stdID": parseInt(ids[i].innerText), "grade": parseInt(updated[i].value)})
   }
@@ -98,10 +97,8 @@ document.getElementById("submitDegree").addEventListener("click", function() {
   zeft();
 })
 let logOutBtn = document.querySelector(".log-out");
-console.log(logOutBtn);
 logOutBtn.addEventListener("click", function() {
     std.logout();
-    updateData();
 });
 
 document.getElementById("backBtn").onclick = function () {
@@ -112,9 +109,6 @@ function zeft() {
   updateData();
 } 
 //My Implemnt
-
-console.log(theCourse);
-
 thecourseGrades.forEach(crsg => {
   let row = `<tr>
         <td class="ids">${crsg.stdID}</td>

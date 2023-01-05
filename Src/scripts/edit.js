@@ -13,11 +13,7 @@ for (var i = 0; i < edit_buttons.length; i++) {
 
     var row = this.parentElement.parentElement;
     var row_index = row.rowIndex;
-
-    console.log(row_index);
-
     var teacher_id = teacher_table.rows[row_index].cells[1].innerText;
-    console.log(teacher_id);
 
     teacher_table_div.style.display = "none";
     teacher_form_div.style.display = "block";
@@ -34,7 +30,6 @@ for (var i = 0; i < edit_buttons.length; i++) {
     tchPassword.value = tchData["password"];
     tchUserName.value = tchData["userName"];
     let tchCoursesData = tchData["coursesId"];
-    console.log(tchCoursesData);
 
     for (var i = 0; i < tchCourses.length; i++) {
       if (tchCoursesData.includes(parseInt(tchCourses[i].value))) {
@@ -110,7 +105,6 @@ for (var i = 0; i < edit_buttons.length; i++) {
     }
 
     editStd.addEventListener("click", function () {
-      console.log(stCoursesData);
       if (stdChoices.length == 0) {
         let newStData = new Student(
           stData["id"],
@@ -136,7 +130,6 @@ for (var i = 0; i < edit_buttons.length; i++) {
     });
 
     // stCoursesData = [];
-    console.log(stCoursesData);
   });
 }
 
@@ -181,7 +174,6 @@ for (var i = 0; i < edit_buttons.length; i++) {
         crsDesc.value,
         crsContent.value
       );
-      console.log(newCrsData);
       //   localStorage.setItem("Courses" + course_id, JSON.stringify(newCrsData));
       admin.editCourse(newCrsData, course_id);
       alert("Course edited successfully");

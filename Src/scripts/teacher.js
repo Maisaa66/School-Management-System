@@ -1,4 +1,4 @@
-
+// let std = new Teacher(stdData.id, stdData.name,"", "", stdData.coursesId);
 // let edit_course_content_btn = document.getElementById("editCourseContentBtn");
 // let description_editor_text = document.getElementById("description_editor");
 // let course_description_par = document.getElementById("course_description");
@@ -42,7 +42,7 @@ let numCourses = document.querySelector("#numCourses");
 
 ;(function() {
     let stdData = JSON.parse(localStorage.getItem("stdData"));
-    let teacher = new Student(stdData.id, stdData.name,"", "", stdData.coursesId);
+    let std = new Student(stdData.id, stdData.name,"", "", stdData.coursesId);
     welcome.innerText = "Welcome " + stdData.name.slice(0, stdData.name.indexOf(" "));
     stdName.innerText = std.name;
     stdID.innerText = std.id;

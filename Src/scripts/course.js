@@ -1,5 +1,5 @@
 let stdData = JSON.parse(localStorage.getItem("stdData"));
-let std = new Teacher(stdData.id, stdData.name,"", "", stdData.coursesId);
+let tch = new Teacher(stdData.id, stdData.name,"", "", stdData.coursesId);
 
 let course = document.getElementsByClassName("course"),
   courseName = document.getElementsByClassName("courseName"),
@@ -48,20 +48,18 @@ for (let i = 0; i < editCourse.length; i++) {
     coursesContainer.style.display = "none";
     courseContentEditor.classList.add("shown");
     clickedCoursekey = coursesIds[i];
-    console.log(clickedCoursekey);
   };
 }
 
 let admitBtn = document.getElementById("replaceContent"),
   fields = document.getElementsByTagName("textarea");
-admitBtn.onclick = function () {
+  admitBtn.onclick = function () {
   dataAsObject.content = "";
   for (let i = 0; i < fields.length; i++) {
     if (fields[i].value) {
       dataAsObject.content += fields[i].value + ", ";
     }
 
-    // console.log(clickedCoursekey);
   }
   localStorage.setItem(clickedCoursekey, JSON.stringify(dataAsObject));
   location.reload();
@@ -79,9 +77,7 @@ for (let i = 0; i < coursesIds.length; i++) {
       cookiedData = dataAsObject["stdGrade"];
     for (let x = 0; x < cookiedData.length; x++) {
       let savedIds = JSON.stringify(cookiedData[x]["stdID"]),
-        savedDegrees = JSON.stringify(cookiedData[x]["grade"]);
-      console.log(savedIds);
-      console.log(cookiedData[x]);
+      savedDegrees = JSON.stringify(cookiedData[x]["grade"]);
       document.cookie =
         "StudentCode" + (x + 1) + "=" + savedIds + ";expires= 6 Jan 2023";
       document.cookie =
@@ -107,7 +103,6 @@ document.getElementById("backBtn").onclick = function () {
 
 
 let logOutBtn = document.querySelector(".log-out");
-console.log(logOutBtn);
 logOutBtn.addEventListener("click", function() {
     std.logout();
 });

@@ -22,6 +22,4 @@ function updateData(){
     localStorage.setItem("allTchs", JSON.stringify(tchs));
     
     };
-    
     updateData();
-    
